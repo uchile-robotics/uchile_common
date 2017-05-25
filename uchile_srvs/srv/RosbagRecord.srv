@@ -1,0 +1,5 @@
+string id_name
+bool status
+string bag_filename
+string[] topics
+---
