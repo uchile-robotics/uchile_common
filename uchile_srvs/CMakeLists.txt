@@ -62,6 +62,7 @@ add_service_files(
   TimerString.srv
   ImageRecognition.srv
   ImageReport.srv
+  RosbagRecord.srv
 )
 
 ## Generate added messages and services with any dependencies listed here
