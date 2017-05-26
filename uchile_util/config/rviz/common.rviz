@@ -6,6 +6,9 @@ Panels:
       Expanded:
         - /Global Options1
         - /navigation1/move_base1
+        - /navigation1/move_base1/global_planner_navfn1/plan1
+        - /navigation1/move_base1/local_planner_trajectory1/plan1
+        - /navigation1/move_base1/global_planner_global1/plan1
       Splitter Ratio: 0.72
     Tree Height: 698
   - Class: rviz/Selection
@@ -505,7 +508,7 @@ Visualization Manager:
                   Use Fixed Frame: true
                   Use rainbow: true
                   Value: false
-              Enabled: false
+              Enabled: true
               Name: global_planner_navfn
             - Class: rviz/Group
               Displays:
@@ -651,7 +654,7 @@ Visualization Manager:
                   Use Fixed Frame: true
                   Use rainbow: true
                   Value: false
-              Enabled: false
+              Enabled: true
               Name: local_planner_trajectory
             - Class: rviz/Group
               Displays:
@@ -686,7 +689,7 @@ Visualization Manager:
                   Topic: /bender/nav/move_base/GlobalPlanner/potential
                   Unreliable: false
                   Value: false
-              Enabled: true
+              Enabled: false
               Name: global_planner_global
             - Class: rviz/Group
               Displays:
@@ -772,16 +775,16 @@ Visualization Manager:
                   Use Fixed Frame: true
                   Use rainbow: true
                   Value: false
-              Enabled: true
+              Enabled: false
               Name: local_planner_dwa
             - Class: rviz/MarkerArray
-              Enabled: true
+              Enabled: false
               Marker Topic: /bender/nav/move_base/twist_recovery
               Name: twist_recovery
               Namespaces:
                 {}
               Queue Size: 100
-              Value: true
+              Value: false
           Enabled: true
           Name: move_base
         - Class: rviz/Group
@@ -1135,7 +1138,7 @@ Visualization Manager:
         Value: false
       Name: Current View
       Near Clip Distance: 0.01
-      Scale: 57.5067
+      Scale: 101.346
       Target Frame: <Fixed Frame>
       Value: TopDownOrtho (rviz)
       X: 4.33769
@@ -1157,7 +1160,7 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 1855
-  X: 122
-  Y: 91
+  X: 55
+  Y: 14
   rgbd_head_rgb:
     collapsed: false
