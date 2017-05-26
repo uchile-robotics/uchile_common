@@ -1,3 +1,4 @@
+string only_obj
 ---
 sensor_msgs/Image rgb_img
 sensor_msgs/Image depth_img
