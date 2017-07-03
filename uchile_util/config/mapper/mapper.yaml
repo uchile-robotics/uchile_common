@@ -43,7 +43,13 @@ livin: ["sofa","couch_table","sidetable"]
 bedroom: ["closet","bed","desk"]
 
 
+size1: ["greentea", "papayamilk", "puremilk", "water","orangejuice","beer","honeychip","pringles","coconutcereals","cocoballs","eggstars","gramsoup","beansauce"]
+size2: ["yogurt","biscuits","bubblegum","chocolates","tomatochips","barbecuechips","apple","lemon","soap","lotion","toothpaste","cloth","bowl"]
+size3: ["plate","tray","fork","knife","spoon","apple","pear","kiwi","tomato","pear","mate","sponge","toiletpaper"]
 
+weigth1: ["greentea", "papayamilk", "puremilk", "water","orangejuice","beer","honeychip","pringles","coconutcereals","cocoballs","eggstars","gramsoup","beansauce"]
+weigth2: ["yogurt","biscuits","bubblegum","chocolates","tomatochips","barbecuechips","apple","lemon","soap","lotion","toothpaste","cloth","bowl"]
+weigth3: ["plate","tray","fork","knife","spoon","apple","pear","kiwi","tomato","pear","mate","sponge","toiletpaper"]
 
 
 classes_color : ["blue","red","yellow","back","white"]
