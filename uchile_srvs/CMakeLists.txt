@@ -63,6 +63,7 @@ add_service_files(
   ImageRecognition.srv
   ImageReport.srv
   RosbagRecord.srv
+  GetShelfPose.srv
 )
 
 ## Generate added messages and services with any dependencies listed here
