@@ -9,5 +9,9 @@
  -->
    <rosparam file="$(find uchile_util)/config/mapper/$(arg cfg_yaml)" command="load" />
 
+   <rosparam file="$(find uchile_util)/config/mapper/ObjectInformation.yaml" command="load" />
+   <rosparam file="$(find uchile_util)/config/mapper/TablesInformation.yaml" command="load" />
+
+
  	<!-- rosparam load $(find uchile_util)/config/mapper/$(arg cfg_yaml) -->
 </launch>
