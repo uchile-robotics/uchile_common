@@ -1,9 +1,13 @@
-dinner_table: [ 0.8, 0.6, 0.6]
-kitchen_counter: [ 0.8, 0.6, 0.6]
-sofa: [ 0.8, 0.6, 0.6]
-couch_table: [ 0.8, 0.6, 0.6]
-side_table: [ 0.8, 0.6, 0.6]
-stove: [ 0.8, 0.6, 0.6]
-bed: [ 0.8, 0.6, 0.6]
-closet: [ 0.8, 0.6, 0.6]
-desk: [ 0.8, 0.6, 0.6]
+#length, with, height
+
+dinner_table: [1.20, 0.50, 0.75]
+kitchen_counter: [1.20, 0.50, 0.75]
+sofa: [1.20, 0.50, 0.75]
+couch_table: [1.20, 0.50, 0.75]
+side_table: [1.20, 0.50, 0.75]
+stove: [1.20, 0.50, 0.75]
+bed: [1.20, 0.50, 0.75]
+closet: [1.20, 0.50, 0.75]
+desk: [1.20, 0.50, 0.75]
+
+
