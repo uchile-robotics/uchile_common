@@ -50,11 +50,12 @@ bedroom_chairs: "4"
 office_chairs: "5"
 bathroom_chairs: "6"
 
-classes_colour : ["blue","red","yellow","back","white"]
-blue: ["flakes","oat","chips","senbei","pringles","peanuts"]
+classes_colour : ["blue","red","yellow","black","white"]
+blue: ["flakes","chips","senbei","pringles","peanuts"]
 yellow: ["chocolate_bar","manju","mints","chocolate_egg","shampoo","soap","cloth"]
-back: ["tea","beer","coke","sake","noodles","apple","paprika","melon","sushi"]
+black: ["tea","beer","coke","sake","noodles","apple","paprika","melon","sushi"]
 white: ["sponge","bowl","mug","glass","tray","plate","box","bag"]
+red: ["oat"]
 
 size: ["tea","beer","coke","sake","noodles","apple","paprika","melon","sushi","flakes","oat","chips","senbei","pringles","peanuts","chocolate_bar","manju","mints","chocolate_egg","shampoo","soap","cloth","sponge","bowl","mug","glass","tray","plate","box","bag"]
 weigth: ["tea","beer","coke","sake","noodles","apple","paprika","melon","sushi","flakes","oat","chips","senbei","pringles","peanuts","chocolate_bar","manju","mints","chocolate_egg","shampoo","soap","cloth","sponge","bowl","mug","glass","tray","plate","box","bag"]
@@ -72,3 +73,19 @@ object_smallest: tea
 object_biggest: bag
 object_lightest: glass
 object_heaviest: beer
+candies_smallest: mints
+candies_biggest: manju
+candies_ligthest: mints
+candies_heaviest: chocolate_bar
+toiletries_smallest: soap
+toiletries_biggest: shampoo
+toiletries_ligthest: cloth
+toiletries_heaviest: shampoo
+containers_smallest: bag
+containers_biggest: box
+containers_ligthest: glass
+containers_heaviest: box
+snacks_smallest: peanuts
+snacks_biggest: senbei
+snacks_ligthest: chips
+snacks_heaviest: senbei
