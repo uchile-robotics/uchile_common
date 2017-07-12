@@ -1,0 +1,65 @@
+unknown_class: unknown 
+food_smallest: soap
+food_biggest: biscuits
+food_lightest: sponge
+food_heaviest: lotion
+drink_smallest: yogurt
+drink_biggest: orangejuice
+drink_lightest: water
+drink_heaviest: beer
+object_smallest: soap
+object_biggest: biscuits
+object_lightest: toothpaste
+object_heaviest: beer
+
+small_object: ["drinks","food","snacks","cleaningstuff","containers","cutlery","fruit"]
+big_object: ["stove","bar","sidetable","kitchencounter","dining_table","cabinet","bookshelf","sofa","couch_table","sidetable","closet","bed","desk"]
+
+classes : ["drinks","food","snacks","cleaningstuff","containers","cutlery","fruit"]
+drinks: ["greentea", "papayamilk", "puremilk", "water","orangejuice","beer","yogurt"]
+food:   ["biscuits","bubblegum","chocolates","tomatochips","barbecuechips","honeychip","pringles"]
+snacks: ["coconutcereals","cocoballs","eggstars","gramsoup","beansauce","apple","lemon","pear","mate"]
+cleaningstuff: ["sponge","toiletpaper","soap","lotion","toothpaste","cloth"]
+containers: ["bowl","plate","tray"]
+cutlery: ["fork","knife","spoon"]
+fruit: ["apple","pear","kiwi","tomato"]
+
+unknown: []
+unknown_location: waste_bin
+drinks_location: kitchencounter
+food_location: stove
+snacks_location: couch_table
+cleaningstuff_location: closet
+containers_location: bookshelf
+fruit_location: desk
+cutlery_location: cabinet
+
+
+places: ["kitchen","livin","dining","bedroom"]
+
+kitchen_doors: "2"
+living_doors: "2"
+dining_doors: "2"
+bedroom_doors: "2"
+
+kitchen: ["stove","bar","sidetable","kitchencounter"]
+dining: ["dining_table","cabinet","bookshelf"]
+livin: ["sofa","couch_table","sidetable"]
+bedroom: ["closet","bed","desk"]
+
+
+size1: ["greentea", "papayamilk","sushi", "puremilk", "water","orangejuice","beer","honeychip","pringles","coconutcereals","cocoballs","eggstars","gramsoup","beansauce"]
+size2: ["yogurt","biscuits","bubblegum","chocolates","tomatochips","barbecuechips","apple","lemon","soap","lotion","toothpaste","cloth","bowl"]
+size3: ["plate","tray","fork","knife","peanuts", "spoon","apple","pear","kiwi","tomato","pear","mate","sponge","toiletpaper"]
+
+weigth1: ["greentea", "papayamilk", "puremilk", "water","orangejuice","beer","honeychip","pringles","coconutcereals","cocoballs","eggstars","gramsoup","beansauce"]
+weigth2: ["yogurt","biscuits","bubblegum","chocolates","tomatochips","barbecuechips","apple","lemon","soap","lotion","toothpaste","cloth","bowl"]
+weigth3: ["plate","tray","fork","knife","spoon","apple","pear","kiwi","tomato","pear","mate","sponge","toiletpaper"]
+
+
+classes_color : ["blue","red","yellow","back","white"]
+blue: ["greentea", "papayamilk", "puremilk", "water","orangejuice","beer","yogurt","biscuits","bubblegum","chocolates"]
+red:   ["biscuits","bubblegum","chocolates","tomatochips","barbecuechips","honeychip","pringles"]
+yellow: ["coconutcereals","cocoballs","eggstars","gramsoup","beansauce","apple","lemon","pear","mate"]
+back: ["sponge","toiletpaper","soap","lotion","toothpaste","cloth"]
+white: ["bowl","plate","tray"]
