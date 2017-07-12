@@ -19,11 +19,13 @@ candies_location: center_table
 
 
 places: ["bedroom","kitchen","living_room","office","corridor","bathroom"]
+manipulation_places: ["bar","fridge","desk","cupboard","counter","center_table","living_shelf","bedside","tv_stand","living_table","drawer","sink","sideshelf","bookcase","dinnig_table","fridge","cabinet","couch_table","dinner_table","kitchen_counter","kitchen_table"]
+big_object: ["sofa","bed","chairs","plant","bar","fridge","desk","cupboard","counter","center_table","living_shelf","bedside","tv_stand","living_table","drawer","sink","sideshelf","bookcase","dinnig_table","fridge","cabinet","couch_table","dinner_table","kitchen_counter","kitchen_table"]
 
 bedroom: ["bed","bedside"]
 living: ["living_shelf","tv_stand","center_table","living_table","bar"]
 office: ["drawer","desk"]
-kitchen: ["sink","sideshelf","bookcase","dinnig_table","fridge","counter"]
+kitchen: ["sink","sideshelf","bookcase","dinnig_table","fridge","counter","kitchen_counter"]
 corridor : ["cabinet"]
 bathroom : ["cupboard"]
 
