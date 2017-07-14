@@ -5,12 +5,9 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
-        - /knowledge1
         - /knowledge1/map_analyzer1/map_data1/Namespaces1
-        - /navigation1/move_base1
-        - /navigation1/move_base1/global_planner_navfn1/plan1
-        - /navigation1/move_base1/local_planner_trajectory1/plan1
-        - /navigation1/move_base1/global_planner_global1/plan1
+        - /navigation1/planners1/global_navfn1/plan1
+        - /navigation1/planners1/local1/plan1
       Splitter Ratio: 0.72
     Tree Height: 698
   - Class: rviz/Selection
@@ -106,13 +103,13 @@ Visualization Manager:
         - Alpha: 0.7
           Class: rviz/Map
           Color Scheme: map
-          Draw Behind: false
+          Draw Behind: true
           Enabled: true
           Name: map
           Topic: /map
           Unreliable: false
           Value: true
-        - Alpha: 0.6
+        - Alpha: 0.5
           Class: rviz/Map
           Color Scheme: costmap
           Draw Behind: false
@@ -129,15 +126,15 @@ Visualization Manager:
           Displays:
             - Class: rviz/Group
               Displays:
-                - Alpha: 0.7
+                - Alpha: 0.5
                   Class: rviz/Map
                   Color Scheme: costmap
                   Draw Behind: false
-                  Enabled: false
+                  Enabled: true
                   Name: obstacles
                   Topic: /bender/nav/move_base/local_costmap/costmap
                   Unreliable: false
-                  Value: false
+                  Value: true
                 - Alpha: 1
                   Class: rviz/Polygon
                   Color: 255; 0; 46
@@ -177,18 +174,18 @@ Visualization Manager:
                   Use rainbow: true
                   Value: false
               Enabled: true
-              Name: local_costmap
+              Name: local
             - Class: rviz/Group
               Displays:
                 - Alpha: 0.95
                   Class: rviz/Map
                   Color Scheme: costmap
                   Draw Behind: true
-                  Enabled: false
+                  Enabled: true
                   Name: obstacles
                   Topic: /bender/nav/move_base/global_costmap/costmap
                   Unreliable: false
-                  Value: false
+                  Value: true
                 - Alpha: 1
                   Class: rviz/Polygon
                   Color: 0; 0; 0
@@ -197,8 +194,47 @@ Visualization Manager:
                   Topic: /bender/nav/move_base/global_costmap/footprint
                   Unreliable: false
                   Value: true
-              Enabled: true
-              Name: global_costmap
+              Enabled: false
+              Name: global
+          Enabled: true
+          Name: costmaps
+        - Class: rviz/Group
+          Displays:
+            - Class: rviz/Group
+              Displays:
+                - Alpha: 1
+                  Buffer Length: 1
+                  Class: rviz/Path
+                  Color: 255; 141; 10
+                  Enabled: true
+                  Head Diameter: 0.3
+                  Head Length: 0.2
+                  Length: 0.3
+                  Line Style: Billboards
+                  Line Width: 0.06
+                  Name: plan
+                  Offset:
+                    X: 0
+                    Y: 0
+                    Z: 0
+                  Pose Style: None
+                  Radius: 0.03
+                  Shaft Diameter: 0.1
+                  Shaft Length: 0.1
+                  Topic: /bender/nav/move_base/GlobalPlanner/plan
+                  Unreliable: false
+                  Value: true
+                - Alpha: 1
+                  Class: rviz/Map
+                  Color Scheme: costmap
+                  Draw Behind: false
+                  Enabled: false
+                  Name: potential
+                  Topic: /bender/nav/move_base/GlobalPlanner/potential
+                  Unreliable: false
+                  Value: false
+              Enabled: false
+              Name: global
             - Class: rviz/Group
               Displays:
                 - Alpha: 1
@@ -254,7 +290,7 @@ Visualization Manager:
                   Use rainbow: true
                   Value: false
               Enabled: true
-              Name: global_planner_navfn
+              Name: global_navfn
             - Class: rviz/Group
               Displays:
                 - Alpha: 1
@@ -400,42 +436,7 @@ Visualization Manager:
                   Use rainbow: true
                   Value: false
               Enabled: true
-              Name: local_planner_trajectory
-            - Class: rviz/Group
-              Displays:
-                - Alpha: 1
-                  Buffer Length: 1
-                  Class: rviz/Path
-                  Color: 255; 141; 10
-                  Enabled: true
-                  Head Diameter: 0.3
-                  Head Length: 0.2
-                  Length: 0.3
-                  Line Style: Billboards
-                  Line Width: 0.06
-                  Name: plan
-                  Offset:
-                    X: 0
-                    Y: 0
-                    Z: 0
-                  Pose Style: None
-                  Radius: 0.03
-                  Shaft Diameter: 0.1
-                  Shaft Length: 0.1
-                  Topic: /bender/nav/move_base/GlobalPlanner/plan
-                  Unreliable: false
-                  Value: true
-                - Alpha: 1
-                  Class: rviz/Map
-                  Color Scheme: costmap
-                  Draw Behind: false
-                  Enabled: false
-                  Name: potential
-                  Topic: /bender/nav/move_base/GlobalPlanner/potential
-                  Unreliable: false
-                  Value: false
-              Enabled: false
-              Name: global_planner_global
+              Name: local
             - Class: rviz/Group
               Displays:
                 - Alpha: 1
@@ -521,7 +522,7 @@ Visualization Manager:
                   Use rainbow: true
                   Value: false
               Enabled: false
-              Name: local_planner_dwa
+              Name: local_dwa
             - Class: rviz/MarkerArray
               Enabled: false
               Marker Topic: /bender/nav/move_base/twist_recovery
@@ -531,7 +532,7 @@ Visualization Manager:
               Queue Size: 100
               Value: false
           Enabled: true
-          Name: move_base
+          Name: planners
         - Class: rviz/Group
           Displays:
             - Alpha: 1
@@ -578,7 +579,7 @@ Visualization Manager:
           Class: rviz/PoseArray
           Color: 255; 182; 129
           Enabled: true
-          Name: amcl
+          Name: localization
           Topic: /bender/nav/particlecloud
           Unreliable: false
           Value: true
@@ -590,7 +591,7 @@ Visualization Manager:
           Enabled: true
           Head Length: 0.3
           Head Radius: 0.1
-          Name: Goal
+          Name: goal
           Shaft Length: 1
           Shaft Radius: 0.05
           Shape: Arrow
@@ -600,18 +601,22 @@ Visualization Manager:
         - Alpha: 1
           Class: rviz/Polygon
           Color: 25; 255; 0
-          Enabled: false
-          Name: footprint_base
+          Enabled: true
+          Name: footprint (dynamic)
           Topic: /bender/nav/footprint_base
           Unreliable: false
-          Value: false
+          Value: true
         - Class: rviz/MarkerArray
           Enabled: true
           Marker Topic: /bender/nav/safety/markers
           Name: safety
           Namespaces:
-            {}
-          Queue Size: 100
+            safety/candidate_obstacles: true
+            safety/dangerous_obstacles: true
+            safety/expanded_footprint: true
+            safety/obstacle_area: true
+            safety/real_obstacles: true
+          Queue Size: 10
           Value: true
       Enabled: true
       Name: navigation
@@ -656,40 +661,10 @@ Visualization Manager:
           Axis: Z
           Channel Name: intensities
           Class: rviz/LaserScan
-          Color: 255; 86; 8
-          Color Transformer: FlatColor
-          Decay Time: 0
-          Enabled: true
-          Invert Rainbow: false
-          Max Color: 255; 255; 255
-          Max Intensity: 1
-          Min Color: 0; 0; 0
-          Min Intensity: 1
-          Name: laser_front_filtered
-          Position Transformer: XYZ
-          Queue Size: 10
-          Selectable: false
-          Size (Pixels): 2
-          Size (m): 0.01
-          Style: Points
-          Topic: /bender/sensors/laser_front/scan_filtered
-          Unreliable: false
-          Use Fixed Frame: true
-          Use rainbow: true
-          Value: true
-        - Alpha: 1
-          Autocompute Intensity Bounds: true
-          Autocompute Value Bounds:
-            Max Value: 10
-            Min Value: -10
-            Value: true
-          Axis: Z
-          Channel Name: intensities
-          Class: rviz/LaserScan
           Color: 44; 157; 255
           Color Transformer: FlatColor
           Decay Time: 0
-          Enabled: true
+          Enabled: false
           Invert Rainbow: false
           Max Color: 255; 255; 255
           Max Intensity: 3.13162e-36
@@ -706,6 +681,66 @@ Visualization Manager:
           Unreliable: false
           Use Fixed Frame: true
           Use rainbow: false
+          Value: false
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensities
+          Class: rviz/LaserScan
+          Color: 199; 193; 2
+          Color Transformer: FlatColor
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 1
+          Min Color: 0; 0; 0
+          Min Intensity: 1
+          Name: laser_front_filtered
+          Position Transformer: XYZ
+          Queue Size: 2
+          Selectable: false
+          Size (Pixels): 3
+          Size (m): 0.01
+          Style: Points
+          Topic: /bender/sensors/laser_front/scan_filtered
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
+          Value: true
+        - Alpha: 1
+          Autocompute Intensity Bounds: true
+          Autocompute Value Bounds:
+            Max Value: 10
+            Min Value: -10
+            Value: true
+          Axis: Z
+          Channel Name: intensity
+          Class: rviz/LaserScan
+          Color: 0; 66; 51
+          Color Transformer: FlatColor
+          Decay Time: 0
+          Enabled: true
+          Invert Rainbow: false
+          Max Color: 255; 255; 255
+          Max Intensity: 4096
+          Min Color: 0; 0; 0
+          Min Intensity: 0
+          Name: laser_rear_filtered
+          Position Transformer: XYZ
+          Queue Size: 2
+          Selectable: true
+          Size (Pixels): 3
+          Size (m): 0.01
+          Style: Points
+          Topic: /bender/sensors/laser_rear/scan_filtered
+          Unreliable: false
+          Use Fixed Frame: true
+          Use rainbow: true
           Value: true
         - Alpha: 1
           Autocompute Intensity Bounds: true
@@ -757,7 +792,7 @@ Visualization Manager:
           Min Intensity: 0
           Name: rgbd_head
           Position Transformer: XYZ
-          Queue Size: 10
+          Queue Size: 1
           Selectable: true
           Size (Pixels): 3
           Size (m): 0.01
@@ -1129,14 +1164,14 @@ Visualization Manager:
             Y: 0
             Z: 0
           Plane: XY
-          Plane Cell Count: 50
+          Plane Cell Count: 30
           Reference Frame: <Fixed Frame>
           Value: true
         - Class: rviz/Axes
           Enabled: true
-          Length: 0.5
+          Length: 0.2
           Name: origin
-          Radius: 0.06
+          Radius: 0.03
           Reference Frame: <Fixed Frame>
           Value: true
       Enabled: true
@@ -1165,7 +1200,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 8.90146
+      Distance: 10.9706
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
@@ -1177,10 +1212,10 @@ Visualization Manager:
         Z: 0.233195
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 1.3698
+      Pitch: 1.1998
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 5.1304
+      Yaw: 4.72539
     Saved: ~
 Window Geometry:
   Displays:
