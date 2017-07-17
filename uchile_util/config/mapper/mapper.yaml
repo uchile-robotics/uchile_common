@@ -23,18 +23,19 @@ manipulation_places: ["bar","fridge","desk","cupboard","counter","center_table",
 big_object: ["sofa","bed","chairs","plant","bar","fridge","desk","cupboard","counter","center_table","living_shelf","bedside","tv_stand","living_table","drawer","sink","sideshelf","bookcase","dinnig_table","fridge","cabinet","couch_table","dinner_table","kitchen_counter","kitchen_table"]
 
 bedroom: ["bed","bedside"]
-living: ["living_shelf","tv_stand","center_table","living_table","bar"]
+living_room: ["living_shelf","tv_stand","center_table","living_table","bar"]
 office: ["drawer","desk"]
 kitchen: ["sink","sideshelf","bookcase","dinnig_table","fridge","counter","kitchen_counter"]
 corridor : ["cabinet"]
 bathroom : ["cupboard"]
 
 kitchen_doors: "1"
-living_doors: "2"
+living_room_doors: "2"
 dining_doors: "3"
 bedroom_doors: "4"
 office_doors: "5"
 bathroom_doors: "6"
+corridor_doors: "6"
 
 kitchen_table: "1"
 living_table: "2"
