@@ -19,13 +19,13 @@ candies_location: center_table
 
 
 places: ["bedroom","kitchen","living_room","office","corridor","bathroom"]
-manipulation_places: ["bar","fridge","desk","cupboard","counter","center_table","living_shelf","bedside","tv_stand","living_table","drawer","sink","sideshelf","bookcase","dinnig_table","fridge","cabinet","couch_table","dinner_table","kitchen_counter","kitchen_table"]
+manipulation_places: ["bar","fridge","desk","cupboard","counter","center_table","living_shelf","bedside","tv_stand","living_table","drawer","sink","sideshelf","bookcase","dining_table","fridge","cabinet","couch_table","dinner_table","kitchen_counter","kitchen_table"]
 big_object: ["sofa","bed","chairs","plant","bar","fridge","desk","cupboard","counter","center_table","living_shelf","bedside","tv_stand","living_table","drawer","sink","sideshelf","bookcase","dinnig_table","fridge","cabinet","couch_table","dinner_table","kitchen_counter","kitchen_table"]
 
 bedroom: ["bed","bedside"]
-living: ["living_shelf","tv_stand","center_table","living_table","bar"]
+living_room: ["living_shelf","tv_stand","center_table","living_table","bar"]
 office: ["drawer","desk"]
-kitchen: ["sink","sideshelf","bookcase","dinnig_table","fridge","counter","kitchen_counter"]
+kitchen: ["sink","sideshelf","bookcase","dining_table","fridge","counter","kitchen_counter"]
 corridor : ["cabinet"]
 bathroom : ["cupboard"]
 
@@ -53,17 +53,17 @@ bathroom_chairs: "6"
 classes_colour : ["blue","red","yellow","black","white"]
 blue: ["flakes","chips","senbei","pringles","peanuts"]
 yellow: ["chocolate_bar","manju","mints","chocolate_egg","shampoo","soap","cloth"]
-black: ["tea","beer","coke","sake","noodles","apple","paprika","melon","sushi"]
+black: ["tea","beer","coke","sake","noodles","apple","melon","sushi"]
 white: ["sponge","bowl","mug","glass","tray","plate","box","bag"]
-red: ["oat"]
+red: ["oat","paprika"]
 
 size: ["tea","beer","coke","sake","noodles","apple","paprika","melon","sushi","flakes","oat","chips","senbei","pringles","peanuts","chocolate_bar","manju","mints","chocolate_egg","shampoo","soap","cloth","sponge","bowl","mug","glass","tray","plate","box","bag"]
 weigth: ["tea","beer","coke","sake","noodles","apple","paprika","melon","sushi","flakes","oat","chips","senbei","pringles","peanuts","chocolate_bar","manju","mints","chocolate_egg","shampoo","soap","cloth","sponge","bowl","mug","glass","tray","plate","box","bag"]
 
-unknown_class: unknown 
+unknown_class: unknown
 food_smallest: paprika
 food_biggest: melon
-food_lightest: sponge
+food_lightest: chips
 food_heaviest: apple
 drink_smallest: beer
 drink_biggest: sake
