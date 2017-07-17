@@ -5,11 +5,12 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
+        - /knowledge1
         - /knowledge1/map_analyzer1/map_data1/Namespaces1
         - /navigation1/planners1/global_navfn1/plan1
         - /navigation1/planners1/local1/plan1
       Splitter Ratio: 0.72
-    Tree Height: 643
+    Tree Height: 391
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -20,7 +21,8 @@ Panels:
     Name: Tool Properties
     Splitter Ratio: 0.588679
   - Class: rviz/Views
-    Expanded: ~
+    Expanded:
+      - /Current View1
     Name: Views
     Splitter Ratio: 0.518519
   - Class: rviz/Time
@@ -40,7 +42,38 @@ Visualization Manager:
               Marker Topic: /bender/knowledge/pose_server_marker_plugin/pose_names
               Name: known_poses_names
               Namespaces:
-                {}
+                smap_bar: true
+                smap_bed: true
+                smap_bedroom: true
+                smap_bookshelf: true
+                smap_cabinet: true
+                smap_closet: true
+                smap_couch_table: true
+                smap_desk: true
+                smap_dining_room: true
+                smap_dinner_table: true
+                smap_door_a: true
+                smap_door_b: true
+                smap_gpsr_init: true
+                smap_indoor_a: true
+                smap_indoor_b: true
+                smap_indoor_c: true
+                smap_kitchen: true
+                smap_kitchencounter: true
+                smap_living_room: true
+                smap_operator: true
+                smap_post_in_door_a: true
+                smap_post_in_door_b: true
+                smap_post_out_door_a: true
+                smap_post_out_door_b: true
+                smap_pre_in_door_a: true
+                smap_pre_in_door_b: true
+                smap_pre_out_door_a: true
+                smap_pre_out_door_b: true
+                smap_side_table: true
+                smap_sofa: true
+                smap_storing_table: true
+                smap_stove: true
               Queue Size: 100
               Value: true
             - Class: rviz/InteractiveMarkers
@@ -52,7 +85,7 @@ Visualization Manager:
               Show Visual Aids: false
               Update Topic: /bender/knowledge/pose_server_markers/update
               Value: true
-          Enabled: false
+          Enabled: true
           Name: places
         - Class: rviz/Group
           Displays:
@@ -610,7 +643,11 @@ Visualization Manager:
           Marker Topic: /bender/nav/safety/markers
           Name: safety
           Namespaces:
-            {}
+            safety/candidate_obstacles: true
+            safety/dangerous_obstacles: true
+            safety/expanded_footprint: true
+            safety/obstacle_area: true
+            safety/real_obstacles: true
           Queue Size: 10
           Value: true
       Enabled: true
@@ -814,7 +851,7 @@ Visualization Manager:
           Marker Topic: /bender/sensors/laser_filter_front/markers
           Name: hands_filter_spheres
           Namespaces:
-            inflated_hand: true
+            {}
           Queue Size: 10
           Value: true
       Enabled: true
@@ -1203,7 +1240,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 8.58736
+      Distance: 5.26597
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.06
         Stereo Focal Distance: 1
@@ -1215,18 +1252,18 @@ Visualization Manager:
         Z: 0.722022
       Name: Current View
       Near Clip Distance: 0.01
-      Pitch: 0.9748
+      Pitch: 1.0898
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 5.01039
+      Yaw: 5.02039
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 1028
+  Height: 776
   Hide Left Dock: false
   Hide Right Dock: true
-  QMainWindow State: 000000ff00000000fd0000000400000000000001900000037afc020000000bfb0000001200530065006c0065006300740069006f006e00000001e10000009b0000006400fffffffb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c0061007900730100000028000002c4000000dd00fffffffb0000000a0056006900650077007301000002f2000000b0000000b000fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000001a0072006700620064005f0068006500610064005f007200670062000000024a000000c00000001600fffffffb0000000c00430061006d00650072006102000000410000030c0000006d0000001efb0000000a0049006d006100670065010000024a000000c0000000000000000000000001000001fb0000037afc0200000003fb0000001e0054006f006f006c002000500072006f007000650072007400690065007300000000280000037a0000006400fffffffc000001c6000001dc0000000000fffffffa000000000100000001fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000000ffffffff0000000000000000fb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000073f0000003efc0100000002fb0000000800540069006d006501000000000000073f000002f600fffffffb0000000800540069006d00650100000000000004500000000000000000000005a90000037a00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000400000000000001900000027efc020000000bfb0000001200530065006c0065006300740069006f006e00000001e10000009b0000006400fffffffb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c0061007900730100000028000001c8000000dd00fffffffb0000000a0056006900650077007301000001f6000000b0000000b000fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000001a0072006700620064005f0068006500610064005f007200670062000000024a000000c00000001600fffffffb0000000c00430061006d00650072006102000000410000030c0000006d0000001efb0000000a0049006d006100670065010000024a000000c0000000000000000000000001000001fb0000037afc0200000003fb0000001e0054006f006f006c002000500072006f007000650072007400690065007300000000280000037a0000006400fffffffc000001c6000001dc0000000000fffffffa000000000100000001fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000000ffffffff0000000000000000fb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004bf0000003efc0100000002fb0000000800540069006d00650100000000000004bf000002f600fffffffb0000000800540069006d00650100000000000004500000000000000000000003290000027e00000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -1235,8 +1272,8 @@ Window Geometry:
     collapsed: true
   Views:
     collapsed: false
-  Width: 1855
-  X: 55
-  Y: 14
+  Width: 1215
+  X: 65
+  Y: 24
   rgbd_head_rgb:
     collapsed: false
