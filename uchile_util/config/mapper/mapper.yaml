@@ -30,13 +30,12 @@ corridor : ["cabinet"]
 bathroom : ["cupboard"]
 
 kitchen_doors: "1"
-living_doors: "2"
+living_room_doors: "2"
 dining_doors: "3"
 bedroom_doors: "4"
 office_doors: "5"
 bathroom_doors: "6"
 corridor_doors: "6"
-
 
 kitchen_table: "1"
 living_table: "2"
