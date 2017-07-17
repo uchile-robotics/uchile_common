@@ -35,6 +35,8 @@ dining_doors: "3"
 bedroom_doors: "4"
 office_doors: "5"
 bathroom_doors: "6"
+corridor_doors: "6"
+
 
 kitchen_table: "1"
 living_table: "2"
@@ -42,6 +44,7 @@ dining_table: "3"
 bedroom_table: "4"
 office_table: "5"
 bathroom_table: "6"
+corridor_table: "6"
 
 kitchen_chairs: "1"
 living_chairs: "2"
@@ -49,6 +52,7 @@ dining_chairs: "3"
 bedroom_chairs: "4"
 office_chairs: "5"
 bathroom_chairs: "6"
+corridor_chairs: "6"
 
 classes_colour : ["blue","red","yellow","black","white"]
 blue: ["flakes","chips","senbei","pringles","peanuts"]
