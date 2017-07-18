@@ -19,60 +19,61 @@ find_package(catkin REQUIRED COMPONENTS
 # Generate services in the 'srv' folder
 add_service_files(
   FILES
+  BlobList.srv
   Bool.srv
-  String.srv
-  Float.srv
-  stringReturn.srv
-  stringService.srv
-  ID.srv
-  Onoff.srv
-  IsOn.srv
-  PoseStamped.srv
-  NavGoal.srv
+  DetectEmerg.srv
   Detection.srv
   DetectState.srv
-  Recognition.srv
-  ObjectDetection.srv
-  siftClearDatabase.srv
-  objrecService.srv
-  siftFileTrain.srv
-  BlobList.srv
-  siftGuiTrain.srv
-  DetectEmerg.srv
   DoorDetector.srv
-  PlaneHeight.srv
-  siftOnlineTrain.srv
-  ImageDetector.srv
   FaceRecognition.srv
-  play_sound.srv
-  ImageService.srv
-  synthesize.srv
-  load_dictionary_service.srv
-  TableDetector.srv
-  ReportGenerator.srv
-  SearchPerson.srv
-  Transformer.srv
-  MaskInfo.srv
-  SemMap.srv
-  ValidPoint.srv
-  PointCloud2.srv
-  PointCloud2Trasnform.srv
-  ImageDetection.srv
+  Float.srv
   GenderDetection.srv
-  TimerString.srv
+  GetShelfPose.srv
+  ID.srv
+  ImageDetection.srv
+  ImageDetector.srv
   ImageRecognition.srv
   ImageReport.srv
+  ImageService.srv
+  IsOn.srv
+  load_dictionary_service.srv
+  MaskInfo.srv
+  NavGoal.srv
+  ObjectDetection.srv
+  objrecService.srv
+  Onoff.srv
+  PlaneHeight.srv
+  play_sound.srv
+  PointCloud2.srv
+  PointCloud2Trasnform.srv
+  PoseStamped.srv
+  Recognition.srv
+  ReportGenerator.srv
   RosbagRecord.srv
-  GetShelfPose.srv
+  SearchPerson.srv
+  SemMap.srv
+  siftClearDatabase.srv
+  siftFileTrain.srv
+  siftGuiTrain.srv
+  siftOnlineTrain.srv
+  String.srv
+  StringArray.srv
+  stringReturn.srv
+  stringService.srv
+  synthesize.srv
+  TableDetector.srv
+  TimerString.srv
+  Transformer.srv
+  ValidPoint.srv
 )
 
 ## Generate added messages and services with any dependencies listed here
 generate_messages(
   DEPENDENCIES
-  uchile_msgs
   geometry_msgs
   sensor_msgs
   std_msgs
+  uchile_msgs
 )
 
 

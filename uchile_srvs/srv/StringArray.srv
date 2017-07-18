@@ -1,0 +1,5 @@
+# This srv provides a std_msgs/String array on input and output.
+
+string[] array
+---
+string[] array
