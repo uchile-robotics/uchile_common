@@ -35,7 +35,7 @@ dining_doors: "3"
 bedroom_doors: "4"
 office_doors: "5"
 bathroom_doors: "6"
-corridor_doors: "6"
+corridor_doors: "2"
 
 kitchen_table: "1"
 living_table: "2"
@@ -78,17 +78,17 @@ object_lightest: glass
 object_heaviest: beer
 candies_smallest: mints
 candies_biggest: manju
-candies_ligthest: mints
+candies_lightest: mints
 candies_heaviest: chocolate_bar
 toiletries_smallest: soap
 toiletries_biggest: shampoo
-toiletries_ligthest: cloth
+toiletries_lightest: cloth
 toiletries_heaviest: shampoo
 containers_smallest: bag
 containers_biggest: box
-containers_ligthest: glass
+containers_lightest: glass
 containers_heaviest: box
 snacks_smallest: peanuts
 snacks_biggest: senbei
-snacks_ligthest: chips
+snacks_lightest: chips
 snacks_heaviest: senbei
