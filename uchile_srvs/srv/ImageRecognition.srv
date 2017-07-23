@@ -2,6 +2,7 @@ geometry_msgs/PoseStamped[] pose
 sensor_msgs/Image[] imgs
 string inf_label
 ---
+bool succeed
 bool[] inf_bool
 string[] inf_label
 int32[] inf_int
