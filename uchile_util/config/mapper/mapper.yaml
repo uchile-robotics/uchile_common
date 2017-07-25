@@ -1,95 +1,97 @@
-classes : ['drinks','food','snacks','cutlery','containers','cleaning_stuff','fruit']
+classes : ['drink','food','snack','cutlery','container','cleaning_stuff','fruit']
 unknown: []
-drinks: []
-food: []
-snacks: []
-cutlery: []
-containers: []
-cleaning_stuff: []
-fruit: []
+drink: ['aquarius','coke','cold_brew','green_tea']
+food: ['bread','corn','onion','radish']
+snack: ['candy','chewing_gum','cup_star','curry','fries','jelly']
+cutlery: ['chopsticks','fork','spoon']
+container: ['bowl','plate','soup_container']
+cleaning_stuff: ['asience','hair_spray','moisturizer','shampoo']
+fruit: ['apple','orange']
 
-unknown_location: 
-drinks_location: 
-food_location: 
-snacks_location: 
-cutlery_location: 
-containers_location: 
-cleaning_stuff_location: 
-fruit_location: 
+unknown_location: waste_bin
+drink_location: kitchen_counter
+food_location: kitchen_shelf
+snack_location: kitchen_rack
+cutlery_location: sideboard
+container_location: left_rack
+cleaning_stuff_location: right_rack
+fruit_location: balcony_shelf
 
 places: ['bedroom','kitchen','living_room','balcony','corridor','entrance']
-bedroom: []
-kitchen: []
-living_room: []
-balcony: []
+bedroom: ['little_desk','teepee','bed']
+kitchen: ['sideboard','kitchen_table']
+living_room: ['desk','left_rack','right_rack','bookcase','sofa','coffee_table','TV']
+balcony: ['bistro_table','left_planks','right_planck','balcony_shelf']
 corridor: []
-entrance: []
+entrance: ['entrance_shelf']
 
-bedroom_doors: '3'
-kitchen_doors: '3'
-living_room_doors: '3'
-balcony_doors: '3'
-corridor_doors: '3'
-entrance_doors: '3'
+bedroom_doors: '1'
+kitchen_doors: '1'
+living_room_doors: '1'
+balcony_doors: '0'
+corridor_doors: '0'
+entrance_doors: '1'
 
-bedroom_table: '3'
-kitchen_table: '3'
-living_room_table: '3'
-balcony_table: '3'
-corridor_table: '3'
-entrance_table: '3'
+bedroom_table: '0'
+kitchen_table: '1'
+living_room_table: '1'
+balcony_table: '1'
+corridor_table: '0'
+entrance_table: '0'
 
-bedroom_chairs: '3'
-kitchen_chairs: '3'
-living_room_chairs: '3'
-balcony_chairs: '3'
-corridor_chairs: '3'
-entrance_chairs: '3'
+bedroom_chairs: 0
+kitchen_chairs: '6'
+living_room_chairs: 0
+balcony_chairs: '2'
+corridor_chairs: 0
+entrance_chairs: 0
 
 classes_colour : ['blue','red','yellow','black','white']
-blue: []
-red: []
-yellow: []
-black: []
-white: []
+blue: ['hair_spray',cold_brew','shampoo','cup_star']
+red: ['fries','apple','asience','bowl','bread','candy',]
+yellow: ['green_tea','onion','orange','corn']
+black: ['coke','soup_container','jelly']
+white: ['aquarius','moisturizer','radish','chewing_gum','chopsticks','curry','fork','spoon','plate']
 
-size: []
-weigth: []
+size: ['spoon','forks','chopsticks','apple','onion','orange','candies','jelly','chewing_gum','soup_container']
+weigth: ['forks','spoon','chopsticks','apple','orange','onion','acuarius','shampoo','hair_spray','coke','asience','green_tea']
 
-unknown_class: unknown
-unknown_smallest: 
-unknown_biggest: 
-unknown_lightest: 
-unknown_heaviest: 
-drinks_smallest: 
-drinks_biggest: 
-drinks_lightest: 
-drinks_heaviest: 
-food_smallest: 
-food_biggest: 
-food_lightest: 
-food_heaviest: 
-snacks_smallest: 
-snacks_biggest: 
-snacks_lightest: 
-snacks_heaviest: 
-cutlery_smallest: 
-cutlery_biggest: 
-cutlery_lightest: 
-cutlery_heaviest: 
-containers_smallest: 
-containers_biggest: 
-containers_lightest: 
-containers_heaviest: 
-cleaning_stuff_smallest: 
-cleaning_stuff_biggest: 
+drink_smallest: 'cold_brew'
+drink_biggest:  'acuarius'
+drink_lightest: 'cold_brew'
+drink_heaviest: 'acuarius' 
+
+food_smallest: 'onion'
+food_biggest: 'food'
+food_lightest: 'apple'
+food_heaviest: 'orange'
+
+snack_smallest: 'onion'
+snack_biggest: 'bread'
+snack_lightest: 'onion'
+snack_heaviest: 'radish'
+
+cutlery_smallest: 'spoon'
+cutlery_biggest: 'chopsticks'
+cutlery_lightest: 'forks'
+cutlery_heaviest: 'chopsticks'
+
+container_smallest: 'soup_container'
+container_biggest: 'plate'
+container_lightest: 'soup_container'
+container_heaviest: 'bowl'
+
+cleaning_stuff_smallest:  
+cleaning_stuff_biggest: shampoo
 cleaning_stuff_lightest: 
-cleaning_stuff_heaviest: 
-fruit_smallest: 
-fruit_biggest: 
-fruit_lightest: 
-fruit_heaviest: 
-object_smallest: 
-object_biggest: 
-object_lightest: 
-object_heaviest: 
+cleaning_stuff_heaviest: shampoo
+
+fruit_smallest: 'apple'
+fruit_biggest: 'orange'
+fruit_lightest: 'apple'
+fruit_heaviest: 'orange'
+
+object_smallest: spoon
+object_biggest: plate
+object_lightest: fork
+object_heaviest: acuarius
