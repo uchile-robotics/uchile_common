@@ -1,94 +1,95 @@
-classes : ["drinks","food","snacks","toiletries","containers","candies"]
-
-drinks : ["tea","beer","coke","sake"]
-food : ["noodles","apple","paprika","melon","sushi","flakes","oat"]
-snacks : ["chips","senbei","pringles","peanuts"]
-candies : ["chocolate_bar","manju","mints","chocolate_egg"]
-toiletries: ["shampoo","soap","cloth","sponge"]
-containers: ["bowl","mug","glass","tray","plate","box","bag"]
-
-
+classes : ['drinks','food','snacks','cutlery','containers','cleaning_stuff','fruit']
 unknown: []
-unknown_location: waste_bin
-drinks_location: bar
-food_location: fridge
-snacks_location: desk
-toiletries_location: cupboard 
-containers_location: counter
-candies_location: center_table
+drinks: []
+food: []
+snacks: []
+cutlery: []
+containers: []
+cleaning_stuff: []
+fruit: []
 
+unknown_location: 
+drinks_location: 
+food_location: 
+snacks_location: 
+cutlery_location: 
+containers_location: 
+cleaning_stuff_location: 
+fruit_location: 
 
-places: ["bedroom","kitchen","living_room","office","corridor","bathroom"]
-manipulation_places: ["bar","fridge","desk","cupboard","counter","center_table","living_shelf","bedside","tv_stand","living_table","drawer","sink","sideshelf","bookcase","dining_table","fridge","cabinet","couch_table","dinner_table","kitchen_counter","kitchen_table"]
-big_object: ["sofa","bed","chairs","plant","bar","fridge","desk","cupboard","counter","center_table","living_shelf","bedside","tv_stand","living_table","drawer","sink","sideshelf","bookcase","dinnig_table","fridge","cabinet","couch_table","dinner_table","kitchen_counter","kitchen_table"]
+places: ['bedroom','kitchen','living_room','balcony','corridor','entrance']
+bedroom: []
+kitchen: []
+living_room: []
+balcony: []
+corridor: []
+entrance: []
 
-bedroom: ["bed","bedside"]
-living_room: ["living_shelf","tv_stand","center_table","living_table","bar"]
-office: ["drawer","desk"]
-kitchen: ["sink","sideshelf","bookcase","dining_table","fridge","counter","kitchen_counter"]
-corridor : ["cabinet"]
-bathroom : ["cupboard"]
+bedroom_doors: '3'
+kitchen_doors: '3'
+living_room_doors: '3'
+balcony_doors: '3'
+corridor_doors: '3'
+entrance_doors: '3'
 
-kitchen_doors: "1"
-living_room_doors: "2"
-dining_doors: "3"
-bedroom_doors: "4"
-office_doors: "5"
-bathroom_doors: "6"
-corridor_doors: "2"
+bedroom_table: '3'
+kitchen_table: '3'
+living_room_table: '3'
+balcony_table: '3'
+corridor_table: '3'
+entrance_table: '3'
 
-kitchen_table: "1"
-living_table: "2"
-dining_table: "3"
-bedroom_table: "4"
-office_table: "5"
-bathroom_table: "6"
-corridor_table: "6"
+bedroom_chairs: '3'
+kitchen_chairs: '3'
+living_room_chairs: '3'
+balcony_chairs: '3'
+corridor_chairs: '3'
+entrance_chairs: '3'
 
-kitchen_chairs: "1"
-living_chairs: "2"
-dining_chairs: "3"
-bedroom_chairs: "4"
-office_chairs: "5"
-bathroom_chairs: "6"
-corridor_chairs: "6"
+classes_colour : ['blue','red','yellow','black','white']
+blue: []
+red: []
+yellow: []
+black: []
+white: []
 
-classes_colour : ["blue","red","yellow","black","white"]
-blue: ["flakes","chips","senbei","pringles","peanuts"]
-yellow: ["chocolate_bar","manju","mints","chocolate_egg","shampoo","soap","cloth"]
-black: ["tea","beer","coke","sake","noodles","apple","melon","sushi"]
-white: ["sponge","bowl","mug","glass","tray","plate","box","bag"]
-red: ["oat","paprika"]
-
-size: ["tea","beer","coke","sake","noodles","apple","paprika","melon","sushi","flakes","oat","chips","senbei","pringles","peanuts","chocolate_bar","manju","mints","chocolate_egg","shampoo","soap","cloth","sponge","bowl","mug","glass","tray","plate","box","bag"]
-weigth: ["tea","beer","coke","sake","noodles","apple","paprika","melon","sushi","flakes","oat","chips","senbei","pringles","peanuts","chocolate_bar","manju","mints","chocolate_egg","shampoo","soap","cloth","sponge","bowl","mug","glass","tray","plate","box","bag"]
+size: []
+weigth: []
 
 unknown_class: unknown
-food_smallest: paprika
-food_biggest: melon
-food_lightest: chips
-food_heaviest: apple
-drink_smallest: beer
-drink_biggest: sake
-drink_lightest: coke
-drink_heaviest: flakes
-object_smallest: tea
-object_biggest: bag
-object_lightest: glass
-object_heaviest: beer
-candies_smallest: mints
-candies_biggest: manju
-candies_lightest: mints
-candies_heaviest: chocolate_bar
-toiletries_smallest: soap
-toiletries_biggest: shampoo
-toiletries_lightest: cloth
-toiletries_heaviest: shampoo
-containers_smallest: bag
-containers_biggest: box
-containers_lightest: glass
-containers_heaviest: box
-snacks_smallest: peanuts
-snacks_biggest: senbei
-snacks_lightest: chips
-snacks_heaviest: senbei
+unknown_smallest: 
+unknown_biggest: 
+unknown_lightest: 
+unknown_heaviest: 
+drinks_smallest: 
+drinks_biggest: 
+drinks_lightest: 
+drinks_heaviest: 
+food_smallest: 
+food_biggest: 
+food_lightest: 
+food_heaviest: 
+snacks_smallest: 
+snacks_biggest: 
+snacks_lightest: 
+snacks_heaviest: 
+cutlery_smallest: 
+cutlery_biggest: 
+cutlery_lightest: 
+cutlery_heaviest: 
+containers_smallest: 
+containers_biggest: 
+containers_lightest: 
+containers_heaviest: 
+cleaning_stuff_smallest: 
+cleaning_stuff_biggest: 
+cleaning_stuff_lightest: 
+cleaning_stuff_heaviest: 
+fruit_smallest: 
+fruit_biggest: 
+fruit_lightest: 
+fruit_heaviest: 
+object_smallest: 
+object_biggest: 
+object_lightest: 
+object_heaviest: 
