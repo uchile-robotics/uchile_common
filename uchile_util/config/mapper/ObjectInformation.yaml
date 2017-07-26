@@ -6,7 +6,7 @@ bowl: [ 0.15, 0.15] #TODO train
 bread: [ 0.11, 0.13]
 candy: [ 0.04, 0.08]
 chewing_gum: [ 0.06, 0.08]
-chopsticks: [ 0.15, 0.15] #TODO train
+chopsticks: [ 0.02, 0.05]
 coke: [ 0.05, 0.14]
 cold_brew: [ 0.06, 0.13]
 corn: [ 0.18, 0.06]
@@ -19,9 +19,9 @@ hair_spray: [ 0.05, 0.20]
 jelly: [ 0.09, 0.06]
 moisturizer: [ 0.03, 0.16]
 onion: [ 0.06, 0.06]
-orange: [ 0.15, 0.15] #TODO train
+orange: [ 0.05, 0.05]
 plate: [ 0.15, 0.15] #TODO train
 radish: [ 0.08, 0.16]
 shampoo: [ 0.04, 0.17]
-soup_container: [ 0.15, 0.15]#TODO train
+soup_container: [ 0.08, 0.05]
 spoon: [ 0.01, 0.10] #TODO train
