@@ -16,6 +16,9 @@ cutlery_location: sideboard
 container_location: left_rack
 cleaning_stuff_location: right_rack
 fruit_location: balcony_shelf
+drinks_location: kitchen_counter
+snacks_location: kitchen_rack
+containers_location: left_rack
 
 places: ['bedroom','kitchen','living_room','balcony','corridor','entrance']
 bedroom: ['little_desk','teepee','bed']
@@ -24,6 +27,8 @@ living_room: ['desk','left_rack','right_rack','bookcase','sofa','coffee_table','
 balcony: ['bistro_table','left_planks','right_planck','balcony_shelf']
 corridor: []
 entrance: ['entrance_shelf']
+
+big_object: ['bedroom','kitchen','living_room','balcony','corridor','entrance','little_desk','teepee','bed','sideboard','kitchen_table','desk','left_rack','right_rack','bookcase','sofa','coffee_table','TV','bistro_table','left_planks','right_planck','balcony_shelf','entrance_shelf']
 
 bedroom_doors: '1'
 kitchen_doors: '1'
