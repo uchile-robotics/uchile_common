@@ -22,16 +22,18 @@ containers_location: left_rack
 
 places: ['bedroom','kitchen','living_room','balcony','corridor','entrance']
 bedroom: ['little_desk','teepee','bed']
-kitchen: ['sideboard','kitchen_table']
+kitchen: ['sideboard','kitchen_table','kitchen_shelf','kitchen_counter','fridge','kitchen_rack']
 living_room: ['desk','left_rack','right_rack','bookcase','sofa','coffee_table','TV']
 balcony: ['bistro_table','left_planks','right_planck','balcony_shelf']
 corridor: []
 entrance: ['entrance_shelf']
 
-big_object: ['bedroom','kitchen','living_room','balcony','corridor','entrance','little_desk','teepee','bed','sideboard','kitchen_table','desk','left_rack','right_rack','bookcase','sofa','coffee_table','TV','bistro_table','left_planks','right_planck','balcony_shelf','entrance_shelf']
+
+big_object: ['little_desk','teepee','bed','sideboard','kitchen_table','kitchen_shelf','kitchen_counter','fridge','kitchen_rack','desk','left_rack','right_rack','bookcase','sofa','coffee_table','TV','bistro_table','left_planks','right_planck','balcony_shelf','entrance_shelf']
+big_objects: ['little_desk','teepee','bed','sideboard','kitchen_table','kitchen_shelf','kitchen_counter','fridge','kitchen_rack','desk','left_rack','right_rack','bookcase','sofa','coffee_table','TV','bistro_table','left_planks','right_planck','balcony_shelf','entrance_shelf']
 
 bedroom_doors: '1'
-kitchen_doors: '1'
+kitchen_doors: '1'    
 living_room_doors: '1'
 balcony_doors: '0'
 corridor_doors: '0'
@@ -53,13 +55,14 @@ entrance_chairs: '0'
 
 classes_colour : ['blue','red','yellow','black','white']
 blue: ['hair_spray','cold_brew','shampoo','cup_star']
-red: ['fries','apple','asience','bowl','bread','candy',]
+red: ['fries','apple','asience','bowl','bread','candy']
 yellow: ['green_tea','onion','orange','corn']
 black: ['coke','soup_container','jelly']
 white: ['aquarius','moisturizer','radish','chewing_gum','chopsticks','curry','fork','spoon','plate']
 
-size: ['spoon','forks','chopsticks','apple','onion','orange','candies','jelly','chewing_gum','soup_container']
-weigth: ['forks','spoon','chopsticks','apple','orange','onion','aquarius','shampoo','hair_spray','coke','asience','green_tea']
+
+size : ['spoon','fork','chopsticks','apple','onion','orange','candy','soup_container','chewing_gum','cold_brew','coke','hair_spray','cup_star','fries','asience','jelly','radish','curry','corn','moisturizer','bread','bowl','green_tea','shampoo','aquarius','plate']
+weigth : ['fork','spoon','chopsticks','onion','apple','orange','candy','soup_container','chewing_gum','cold_brew','coke','hair_spray','cup_star','fries','asience','radish','bread','curry','corn','jelly','moisturizer','bowl','green_tea','plate','shampoo','aquarius']
 
 unknown_class: unknown
 
@@ -69,13 +72,13 @@ drink_lightest: 'cold_brew'
 drink_heaviest: 'aquarius' 
 
 food_smallest: 'onion'
-food_biggest: 'food'
-food_lightest: 'apple'
-food_heaviest: 'orange'
+food_biggest: 'bread'
+food_lightest: 'onion'
+food_heaviest: 'radish'
 
-snack_smallest: 'onion'
+snack_smallest: 'candy'
 snack_biggest: 'bread'
-snack_lightest: 'onion'
+snack_lightest: 'fries'
 snack_heaviest: 'radish'
 
 cutlery_smallest: 'spoon'
@@ -102,3 +105,7 @@ object_smallest: 'spoon'
 object_biggest: 'plate'
 object_lightest: 'fork'
 object_heaviest: 'aquarius'
+
+
+
+
