@@ -56,6 +56,8 @@ white: ['aquarius','moisturizer','radish','chewing_gum','chopsticks','curry','fo
 size: ['spoon','forks','chopsticks','apple','onion','orange','candies','jelly','chewing_gum','soup_container']
 weigth: ['forks','spoon','chopsticks','apple','orange','onion','aquarius','shampoo','hair_spray','coke','asience','green_tea']
 
+unknown_class: unknown
+
 drink_smallest: 'cold_brew'
 drink_biggest:  'aquarius'
 drink_lightest: 'cold_brew'
