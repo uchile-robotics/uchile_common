@@ -54,12 +54,12 @@ black: ['coke','soup_container','jelly']
 white: ['aquarius','moisturizer','radish','chewing_gum','chopsticks','curry','fork','spoon','plate']
 
 size: ['spoon','forks','chopsticks','apple','onion','orange','candies','jelly','chewing_gum','soup_container']
-weigth: ['forks','spoon','chopsticks','apple','orange','onion','acuarius','shampoo','hair_spray','coke','asience','green_tea']
+weigth: ['forks','spoon','chopsticks','apple','orange','onion','aquarius','shampoo','hair_spray','coke','asience','green_tea']
 
 drink_smallest: 'cold_brew'
-drink_biggest:  'acuarius'
+drink_biggest:  'aquarius'
 drink_lightest: 'cold_brew'
-drink_heaviest: 'acuarius' 
+drink_heaviest: 'aquarius' 
 
 food_smallest: 'onion'
 food_biggest: 'food'
@@ -94,4 +94,4 @@ fruit_heaviest: 'orange'
 object_smallest: spoon
 object_biggest: plate
 object_lightest: fork
-object_heaviest: acuarius
+object_heaviest: aquarius
