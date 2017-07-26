@@ -39,15 +39,15 @@ balcony_table: '1'
 corridor_table: '0'
 entrance_table: '0'
 
-bedroom_chairs: 0
+bedroom_chairs: '0'
 kitchen_chairs: '6'
-living_room_chairs: 0
+living_room_chairs: '0'
 balcony_chairs: '2'
-corridor_chairs: 0
-entrance_chairs: 0
+corridor_chairs: '0'
+entrance_chairs: '0'
 
 classes_colour : ['blue','red','yellow','black','white']
-blue: ['hair_spray',cold_brew','shampoo','cup_star']
+blue: ['hair_spray','cold_brew','shampoo','cup_star']
 red: ['fries','apple','asience','bowl','bread','candy',]
 yellow: ['green_tea','onion','orange','corn']
 black: ['coke','soup_container','jelly']
@@ -81,17 +81,17 @@ container_biggest: 'plate'
 container_lightest: 'soup_container'
 container_heaviest: 'bowl'
 
-cleaning_stuff_smallest:  
-cleaning_stuff_biggest: shampoo
-cleaning_stuff_lightest: 
-cleaning_stuff_heaviest: shampoo
+cleaning_stuff_smallest:  'shampoo'
+cleaning_stuff_biggest: 'shampoo'
+cleaning_stuff_lightest: 'shampoo'
+cleaning_stuff_heaviest: 'shampoo'
 
 fruit_smallest: 'apple'
 fruit_biggest: 'orange'
 fruit_lightest: 'apple'
 fruit_heaviest: 'orange'
 
-object_smallest: spoon
-object_biggest: plate
-object_lightest: fork
-object_heaviest: aquarius
+object_smallest: 'spoon'
+object_biggest: 'plate'
+object_lightest: 'fork'
+object_heaviest: 'aquarius'
