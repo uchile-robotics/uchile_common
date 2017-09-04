@@ -2,13 +2,11 @@ cmake_minimum_required(VERSION 2.8.3)
 project(uchile_util)
 
 find_package(catkin REQUIRED COMPONENTS
-  roscpp
-  roslib
-  uchile_msgs
-  uchile_srvs
   rospy
   std_msgs
   std_srvs
+  uchile_msgs
+  uchile_srvs
 )
 
 catkin_python_setup()
@@ -18,7 +16,12 @@ catkin_python_setup()
 ###################################
 catkin_package(
    INCLUDE_DIRS include
-   CATKIN_DEPENDS uchile_msgs uchile_srvs rospy std_msgs std_srvs
+   CATKIN_DEPENDS 
+    rospy
+    std_msgs
+    std_srvs
+    uchile_msgs
+    uchile_srvs
 )
 
 ###########
@@ -26,8 +29,8 @@ catkin_package(
 ###########
 
 include_directories(
-	include
-	${catkin_INCLUDE_DIRS}
+  include
+  ${catkin_INCLUDE_DIRS}
 )
 
 

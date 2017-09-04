@@ -2,12 +2,12 @@ cmake_minimum_required(VERSION 2.8.3)
 project(uchile_srvs)
 
 find_package(catkin REQUIRED COMPONENTS
-  uchile_msgs
   geometry_msgs
+  message_generation
   sensor_msgs
   std_msgs
   std_srvs
-  message_generation
+  uchile_msgs
 )
 
 ################################################
@@ -70,14 +70,21 @@ add_service_files(
 ## Generate added messages and services with any dependencies listed here
 generate_messages(
   DEPENDENCIES
-  geometry_msgs
-  sensor_msgs
-  std_msgs
-  uchile_msgs
+    geometry_msgs
+    sensor_msgs
+    std_msgs
+    uchile_msgs
 )
 
 
 ###################################
 ## catkin specific configuration ##
 ###################################
-catkin_package()
+catkin_package(
+  CATKIN_DEPENDS
+    geometry_msgs
+    message_runtime
+    sensor_msgs
+    std_msgs
+    uchile_msgs
+)

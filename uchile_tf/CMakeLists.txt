@@ -5,17 +5,18 @@ project(uchile_tf)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  uchile_msgs
-  uchile_srvs
   cmake_modules
   dynamic_reconfigure
   geometry_msgs
   kdl_parser
   roscpp
+  sensor_msgs
   std_msgs
   std_srvs
   tf
   tf_conversions
+  uchile_msgs
+  uchile_srvs
 )
 find_package(orocos_kdl REQUIRED)
 find_package(Boost REQUIRED COMPONENTS system thread)
@@ -34,16 +35,18 @@ catkin_package(
     dynamic_robot_state_publisher
   INCLUDE_DIRS include
   CATKIN_DEPENDS
-    uchile_msgs
-    uchile_srvs
     dynamic_reconfigure
     geometry_msgs
+    kdl_parser
     roscpp
+    sensor_msgs
     std_msgs
     std_srvs
     tf
     tf_conversions
-  DEPENDS kdl_parser orocos_kdl
+    uchile_msgs
+    uchile_srvs
+  DEPENDS orocos_kdl
 )
 
 ###########
