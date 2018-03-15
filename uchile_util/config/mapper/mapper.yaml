@@ -3,10 +3,14 @@ unknown: []
 drink: ['aquarius','coke','cold_brew','green_tea']
 food: ['bread','corn','onion','radish']
 snack: ['candy','chewing_gum','cup_star','curry','fries','jelly']
+candies: ['candy','chewing_gum','cup_star','curry','fries','jelly']
 cutlery: ['chopsticks','fork','spoon']
-container: ['bowl','plate','soup_container']
+containers: ['bowl','plate','soup_container']
 cleaning_stuff: ['asience','hair_spray','moisturizer','shampoo']
 fruit: ['apple','orange']
+toiletries: []
+
+office_doors: '3'
 
 unknown_location: waste_bin
 drink_location: kitchen_counter
