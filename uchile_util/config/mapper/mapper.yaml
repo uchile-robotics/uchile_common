@@ -1,19 +1,19 @@
-classes : ['drink','food','snack','cutlery','container','cleaning_stuff','fruit']
+classes : ['drinks','food','snack','cutlery','container','cleaning_stuff','fruit']
 unknown: []
-drink: ['aquarius','coke','cold_brew','green_tea']
+drinks: ['aquarius','coke','cold_brew','green_tea']
 food: ['bread','corn','onion','radish']
 snack: ['candy','chewing_gum','cup_star','curry','fries','jelly']
 candies: ['candy','chewing_gum','cup_star','curry','fries','jelly']
 cutlery: ['chopsticks','fork','spoon']
-containers: ['bowl','plate','soup_container']
+container: ['bowl','plate','soup_container']
 cleaning_stuff: ['asience','hair_spray','moisturizer','shampoo']
 fruit: ['apple','orange']
-toiletries: []
+toiletries: ['paper']
 
 office_doors: '3'
 
 unknown_location: waste_bin
-drink_location: kitchen_counter
+drinks_location: kitchen_counter
 food_location: kitchen_shelf
 snack_location: kitchen_rack
 cutlery_location: sideboard
@@ -23,39 +23,50 @@ fruit_location: balcony_shelf
 drinks_location: kitchen_counter
 snacks_location: kitchen_rack
 containers_location: left_rack
+toiletries_location: furniture
 
-places: ['bedroom','kitchen','living_room','balcony','corridor','entrance']
-bedroom: ['little_desk','teepee','bed']
-kitchen: ['sideboard','kitchen_table','kitchen_shelf','kitchen_counter','fridge','kitchen_rack']
-living_room: ['desk','left_rack','right_rack','bookcase','sofa','coffee_table','TV']
+
+
+places: ['bedroom','kitchen','living','balcony','corridor','entrance','bathroom', 'office']
+bedroom: ['little_desk','teepee','bed', 'bedside']
+kitchen: ['sideboard','kitchen_table','kitchen_shelf','kitchen_counter','fridge','kitchen_rack', 'cupboard']
+living: ['desk','left_rack','right_rack','bookcase','sofa','coffee_table','TV', 'cabinet']
 balcony: ['bistro_table','left_planks','right_planck','balcony_shelf']
 corridor: []
 entrance: ['entrance_shelf']
+bathroom: ['furniture']
+office: []
 
-
-big_object: ['little_desk','teepee','bed','sideboard','kitchen_table','kitchen_shelf','kitchen_counter','fridge','kitchen_rack','desk','left_rack','right_rack','bookcase','sofa','coffee_table','TV','bistro_table','left_planks','right_planck','balcony_shelf','entrance_shelf']
-big_objects: ['little_desk','teepee','bed','sideboard','kitchen_table','kitchen_shelf','kitchen_counter','fridge','kitchen_rack','desk','left_rack','right_rack','bookcase','sofa','coffee_table','TV','bistro_table','left_planks','right_planck','balcony_shelf','entrance_shelf']
+big_object: ['cupboard','bedside','cabinet','little_desk','teepee','bed','sideboard','kitchen_table','kitchen_shelf','kitchen_counter','fridge','kitchen_rack','desk','left_rack','right_rack','bookcase','sofa','coffee_table','TV','bistro_table','left_planks','right_planck','balcony_shelf','entrance_shelf']
+big_objects: ['cupboard','bedside','cabinet','little_desk','teepee','bed','sideboard','kitchen_table','kitchen_shelf','kitchen_counter','fridge','kitchen_rack','desk','left_rack','right_rack','bookcase','sofa','coffee_table','TV','bistro_table','left_planks','right_planck','balcony_shelf','entrance_shelf']
 
 bedroom_doors: '1'
 kitchen_doors: '1'    
-living_room_doors: '1'
+living_doors: '1'
 balcony_doors: '0'
 corridor_doors: '0'
 entrance_doors: '1'
+bathroom_doors: '1'
 
 bedroom_table: '0'
 kitchen_table: '1'
-living_room_table: '1'
+living_table: '1'
 balcony_table: '1'
 corridor_table: '0'
 entrance_table: '0'
+bathroom_table: '0'
 
 bedroom_chairs: '0'
 kitchen_chairs: '6'
-living_room_chairs: '0'
+living_chairs: '0'
 balcony_chairs: '2'
 corridor_chairs: '0'
 entrance_chairs: '0'
+bathroom_chairs: '1'
+
+
+bedroom_bedside: '1'
+
 
 classes_colour : ['blue','red','yellow','black','white']
 blue: ['hair_spray','cold_brew','shampoo','cup_star']
@@ -70,10 +81,10 @@ weigth : ['fork','spoon','chopsticks','onion','apple','orange','candy','soup_con
 
 unknown_class: unknown
 
-drink_smallest: 'cold_brew'
-drink_biggest:  'aquarius'
-drink_lightest: 'cold_brew'
-drink_heaviest: 'aquarius' 
+drinks_smallest: 'cold_brew'
+drinks_biggest:  'aquarius'
+drinks_lightest: 'cold_brew'
+drinks_heaviest: 'aquarius' 
 
 food_smallest: 'onion'
 food_biggest: 'bread'
