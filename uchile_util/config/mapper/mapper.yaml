@@ -1,11 +1,11 @@
-classes : ['drinks','food','snack','cutlery','container','cleaning_stuff','fruit']
+classes : ['drinks','food','snacks','cutlery','containers','cleaning_stuff','fruit']
 unknown: []
 drinks: ['aquarius','coke','cold_brew','green_tea']
 food: ['bread','corn','onion','radish']
-snack: ['candy','chewing_gum','cup_star','curry','fries','jelly']
+snacks: ['candy','chewing_gum','cup_star','curry','fries','jelly']
 candies: ['candy','chewing_gum','cup_star','curry','fries','jelly']
 cutlery: ['chopsticks','fork','spoon']
-container: ['bowl','plate','soup_container']
+containers: ['bowl','plate','soup_container']
 cleaning_stuff: ['asience','hair_spray','moisturizer','shampoo']
 fruit: ['apple','orange']
 toiletries: ['paper']
@@ -20,7 +20,7 @@ cutlery_location: sideboard
 container_location: left_rack
 cleaning_stuff_location: right_rack
 fruit_location: balcony_shelf
-drinks_location: kitchen_counter
+drink_location: kitchen_counter
 snacks_location: kitchen_rack
 containers_location: left_rack
 toiletries_location: furniture
@@ -29,14 +29,22 @@ toiletries_location: furniture
 
 places: ['bedroom','kitchen','living','balcony','corridor','entrance','bathroom', 'office']
 bedroom: ['little_desk','teepee','bed', 'bedside']
-kitchen: ['sideboard','kitchen_table','kitchen_shelf','kitchen_counter','fridge','kitchen_rack', 'cupboard']
-living: ['desk','left_rack','right_rack','bookcase','sofa','coffee_table','TV', 'cabinet']
+kitchen: ['sideboard','kitchen_table','kitchen_shelf','kitchen_counter','fridge','kitchen_rack', 'cupboard', 'dining_table']
+living: ['desk','left_rack','right_rack','bookcase','sofa','coffee_table','TV', 'cabinet', 'center_table']
 balcony: ['bistro_table','left_planks','right_planck','balcony_shelf']
 corridor: []
 entrance: ['entrance_shelf']
 bathroom: ['furniture']
-office: []
+office: ['bar']
 
+bedside: []
+dining_table: []
+cupboard: ['paper']
+center_table: []
+cabinet: []
+bar: []
+
+ 
 big_object: ['cupboard','bedside','cabinet','little_desk','teepee','bed','sideboard','kitchen_table','kitchen_shelf','kitchen_counter','fridge','kitchen_rack','desk','left_rack','right_rack','bookcase','sofa','coffee_table','TV','bistro_table','left_planks','right_planck','balcony_shelf','entrance_shelf']
 big_objects: ['cupboard','bedside','cabinet','little_desk','teepee','bed','sideboard','kitchen_table','kitchen_shelf','kitchen_counter','fridge','kitchen_rack','desk','left_rack','right_rack','bookcase','sofa','coffee_table','TV','bistro_table','left_planks','right_planck','balcony_shelf','entrance_shelf']
 
@@ -83,6 +91,7 @@ unknown_class: unknown
 
 drinks_smallest: 'cold_brew'
 drinks_biggest:  'aquarius'
+drink_biggest: 'aquarius'
 drinks_lightest: 'cold_brew'
 drinks_heaviest: 'aquarius' 
 
