@@ -1,0 +1,10 @@
+classes: ['toiletries', 'snacks', 'fruits', 'cutlery', 'tableware', 'food', 'drinks', 'containers']
+
+toiletries: ['shampoo', 'soap', 'cloth', 'sponge', 'tooth_paste']
+snacks: ['chips', 'm_and_m', 'pringles', 'cookies']
+fruits: ['apple','melon', 'banana', 'pear', 'peach']
+cutlery: ['tea_spoon', 'spoon', 'fork', 'knife', 'napkin']
+tableware: ['bid_dish', 'small_dish', 'bowl', 'glass', 'mug']
+food: ['pasta', 'noodles', 'tuna_fish', 'pickles', 'choco_flakes', 'robo_o_s', 'muesli']
+drinks: ['tea', 'beer', 'coke', 'water', 'milk']
+containers: ['tray', 'box', 'bag']
