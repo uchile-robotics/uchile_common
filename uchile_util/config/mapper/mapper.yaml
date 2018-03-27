@@ -5,6 +5,7 @@ toiletries_location: bathroom_cabinet
 toiletrie_location: bathroom_cabinet
 
 snacks: ['chips', 'm_and_m', 'pringles', 'cookies']
+snack:  ['chips', 'm_and_m', 'pringles', 'cookies']
 snacks_location: center_table
 snack_location: center_table
 
@@ -19,7 +20,7 @@ cutlery_location: cutlery_drawer
 tableware: ['bid_dish', 'small_dish', 'bowl', 'glass', 'mug']
 tableware_location: sideboard
 
-food: ['pasta', 'noodles', 'tuna_fish', 'pickles', 'choco_flakes', 'robo_o_s', 'muesli']
+food: ['pasta', 'noodles', 'tuna_fish', 'pickles', 'choco_flakes', 'robo_o', 'muesli']
 food_location: cabinet
 
 drinks: ['tea', 'beer', 'coke', 'water', 'milk']
@@ -29,6 +30,10 @@ drink_location: fridge
 containers: ['tray', 'box', 'bag']
 containers_location: counter
 container_location: counter
+
+unknown: []
+unknown_location: waste_bin
+cleaning_stuff_location: right_rack
 
 
 places: ['bedroom', 'dining_room', 'living_room', 'kitchen', 'corridor', 'bathroom']
@@ -40,6 +45,33 @@ kitchen: ['microwave', 'cupboard', 'counter', 'cabinet', 'sink', 'stove', 'fridg
 corridor: ['cabinet']
 bathroom: ['bidet', 'shower', 'bathtub', 'toilet', 'towel_rail', 'bathrooms_cabinet', 'washbasin']
 
+big_object: ['cupboard','bedside','cabinet','little_desk','teepee','bed','sideboard','kitchen_table','kitchen_shelf','kitchen_counter','fridge','kitchen_rack','desk','left_rack','right_rack','bookcase','sofa','coffee_table','TV','bistro_table','left_planks','right_planck','balcony_shelf','entrance_shelf']
+big_objects: ['cupboard','bedside','cabinet','little_desk','teepee','bed','sideboard','kitchen_table','kitchen_shelf','kitchen_counter','fridge','kitchen_rack','desk','left_rack','right_rack','bookcase','sofa','coffee_table','TV','bistro_table','left_planks','right_planck','balcony_shelf','entrance_shelf']
+
+bedroom_doors: '1'
+kitchen_doors: '1'    
+living_room_doors: '1'
+balcony_doors: '0'
+corridor_doors: '0'
+entrance_doors: '1'
+bathroom_doors: '1'
+
+bedroom_table: '0'
+kitchen_table: '1'
+living_room_table: '1'
+balcony_table: '1'
+corridor_table: '0'
+entrance_table: '0'
+bathroom_table: '0'
+
+bedroom_chairs: '0'
+kitchen_chairs: '6'
+living_room_chairs: '0'
+balcony_chairs: '2'
+corridor_chairs: '0'
+entrance_chairs: '0'
+bathroom_chairs: '1'
+
 classes_colour : ['blue','red','yellow','black','white']
 blue: ['hair_spray','cold_brew','shampoo','cup_star']
 red: ['fries','apple','asience','bowl','bread','candy']
@@ -48,8 +80,8 @@ black: ['coke','soup_container','jelly']
 white: ['aquarius','moisturizer','radish','chewing_gum','chopsticks','curry','fork','spoon','plate']
 
 
-size : ['spoon','fork','chopsticks','apple','onion','orange','candy','soup_container','chewing_gum','cold_brew','coke','hair_spray','cup_star','fries','asience','jelly','radish','curry','corn','moisturizer','bread','bowl','green_tea','shampoo','aquarius','plate']
-weigth : ['fork','spoon','chopsticks','onion','apple','orange','candy','soup_container','chewing_gum','cold_brew','coke','hair_spray','cup_star','fries','asience','radish','bread','curry','corn','jelly','moisturizer','bowl','green_tea','plate','shampoo','aquarius']
+size : ['spoon','fork','chopsticks','apple','onion','orange','candy','soup_container','chewing_gum','cold_brew','mug','melon','coke','cloth','hair_spray','cup_star','robo_o','fries','asience','jelly','radish','curry','corn','moisturizer','bread','bowl','green_tea','shampoo','aquarius','plate']
+weigth : ['fork','spoon','chopsticks','onion','apple','orange','candy','cloth','soup_container','chewing_gum','mug','cold_brew','coke','hair_spray','cup_star','robo_o','fries','asience','radish','bread','curry','corn','jelly','moisturizer','bowl','green_tea','plate','shampoo','aquarius','melon']
 
 unknown_class: unknown
 
