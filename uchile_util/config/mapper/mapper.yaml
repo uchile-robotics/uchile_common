@@ -39,3 +39,57 @@ living_room: ['bookshelf', 'sofa', 'coffee_table', 'center_table', 'bar', 'firep
 kitchen: ['microwave', 'cupboard', 'counter', 'cabinet', 'sink', 'stove', 'fridge', 'ferezer', 'washing_machine', 'dishwasher']
 corridor: ['cabinet']
 bathroom: ['bidet', 'shower', 'bathtub', 'toilet', 'towel_rail', 'bathrooms_cabinet', 'washbasin']
+
+classes_colour : ['blue','red','yellow','black','white']
+blue: ['hair_spray','cold_brew','shampoo','cup_star']
+red: ['fries','apple','asience','bowl','bread','candy']
+yellow: ['green_tea','onion','orange','corn']
+black: ['coke','soup_container','jelly']
+white: ['aquarius','moisturizer','radish','chewing_gum','chopsticks','curry','fork','spoon','plate']
+
+
+size : ['spoon','fork','chopsticks','apple','onion','orange','candy','soup_container','chewing_gum','cold_brew','coke','hair_spray','cup_star','fries','asience','jelly','radish','curry','corn','moisturizer','bread','bowl','green_tea','shampoo','aquarius','plate']
+weigth : ['fork','spoon','chopsticks','onion','apple','orange','candy','soup_container','chewing_gum','cold_brew','coke','hair_spray','cup_star','fries','asience','radish','bread','curry','corn','jelly','moisturizer','bowl','green_tea','plate','shampoo','aquarius']
+
+unknown_class: unknown
+
+drinks_smallest: 'cold_brew'
+drinks_biggest:  'aquarius'
+drink_biggest: 'aquarius'
+drinks_lightest: 'cold_brew'
+drinks_heaviest: 'aquarius' 
+
+food_smallest: 'onion'
+food_biggest: 'bread'
+food_lightest: 'onion'
+food_heaviest: 'radish'
+
+snack_smallest: 'candy'
+snack_biggest: 'bread'
+snack_lightest: 'fries'
+snack_heaviest: 'radish'
+
+cutlery_smallest: 'spoon'
+cutlery_biggest: 'chopsticks'
+cutlery_lightest: 'forks'
+cutlery_heaviest: 'chopsticks'
+
+container_smallest: 'soup_container'
+container_biggest: 'plate'
+container_lightest: 'soup_container'
+container_heaviest: 'bowl'
+
+cleaning_stuff_smallest:  'shampoo'
+cleaning_stuff_biggest: 'shampoo'
+cleaning_stuff_lightest: 'shampoo'
+cleaning_stuff_heaviest: 'shampoo'
+
+fruit_smallest: 'apple'
+fruit_biggest: 'orange'
+fruit_lightest: 'apple'
+fruit_heaviest: 'orange'
+
+object_smallest: 'spoon'
+object_biggest: 'plate'
+object_lightest: 'fork'
+object_heaviest: 'aquarius'
