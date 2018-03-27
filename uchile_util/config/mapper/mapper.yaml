@@ -1,10 +1,41 @@
 classes: ['toiletries', 'snacks', 'fruits', 'cutlery', 'tableware', 'food', 'drinks', 'containers']
 
 toiletries: ['shampoo', 'soap', 'cloth', 'sponge', 'tooth_paste']
+toiletries_location: bathroom_cabinet
+toiletrie_location: bathroom_cabinet
+
 snacks: ['chips', 'm_and_m', 'pringles', 'cookies']
+snacks_location: center_table
+snack_location: center_table
+
+
 fruits: ['apple','melon', 'banana', 'pear', 'peach']
+fruits_location: dining_table
+fruit_location: dining_table
+
 cutlery: ['tea_spoon', 'spoon', 'fork', 'knife', 'napkin']
+cutlery_location: cutlery_drawer
+
 tableware: ['bid_dish', 'small_dish', 'bowl', 'glass', 'mug']
+tableware_location: sideboard
+
 food: ['pasta', 'noodles', 'tuna_fish', 'pickles', 'choco_flakes', 'robo_o_s', 'muesli']
+food_location: cabinet
+
 drinks: ['tea', 'beer', 'coke', 'water', 'milk']
+drinks_location: fridge
+drink_location: fridge
+
 containers: ['tray', 'box', 'bag']
+containers_location: counter
+container_location: counter
+
+
+places: ['bedroom', 'dining_room', 'living_room', 'kitchen', 'corridor', 'bathroom']
+
+bedroom: ['bed', 'night_table', 'wardrobe', 'dresser', 'armchair', 'drawer', 'desk']
+dining_room: ['sideboard', 'cutlery_drawer', 'dining_table', 'chair', 'baby_chair']
+living_room: ['bookshelf', 'sofa', 'coffee_table', 'center_table', 'bar', 'fireplace', 'tv_coach']
+kitchen: ['microwave', 'cupboard', 'counter', 'cabinet', 'sink', 'stove', 'fridge', 'ferezer', 'washing_machine', 'dishwasher']
+corridor: ['cabinet']
+bathroom: ['bidet', 'shower', 'bathtub', 'toilet', 'towel_rail', 'bathrooms_cabinet', 'washbasin']
