@@ -1,5 +1,5 @@
 # classes: ['toiletries', 'snacks', 'fruits', 'cutlery', 'tableware', 'food', 'drinks', 'containers', 'cupboardfood', 'cabinetfood']
-classes: ['cleaning_stuff', 'snacks', 'fruits', 'drinks', 'containers','food'] #'cupboardfood', 'cabinetfood']
+classes: ['cleaning_stuff', 'snacks', 'fruits', 'drinks', 'containers','food', 'cutlery', 'tableware'] #'cupboardfood', 'cabinetfood']
 
 
 #Cleaning Stuff: 
