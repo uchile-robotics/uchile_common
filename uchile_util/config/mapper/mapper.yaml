@@ -5,24 +5,24 @@ classes: ['cleaning_stuff', 'snacks', 'fruits', 'drinks', 'containers','food'] #
 #Cleaning Stuff: location: TBA
 cleaning_stuff: ['cloth','scrubby','sponge']
 cleaning_stuffs:  ['cloth','scrubby','sponge']
-cleaning_stuffs_location: center_table
-cleaning_stuff_location: center_table
+cleaning_stuffs_location: side_table
+cleaning_stuff_location: side_table
 
 #Containers: location: TBA
 containers: ['tray', 'basket']
 container: ['tray', 'basket']
-containers_location: counter
-container_location: counter
+containers_location: end_table
+container_location: end_table
 
 #Drinks: Location TBA
 drinks: ['chocolate_drink', 'coke', 'orange_juice', 'grape_juice', 'sprite']
 drink: ['chocolate_drink', 'coke', 'orange_juice', 'grape_juice', 'sprite']
-drinks_location: fridge
-drink_location: fridge
+drinks_location: counter
+drink_location: counter
 
 #Food: Location TBA
 food: [ 'cereal', 'noodles', 'sausage']
-food_location: cupboard_and_cabinet
+food_location: cupboard
 #cupboardfood: []
 #cabinetfood: []
 #cupboardfood_location: cupboard
@@ -31,20 +31,20 @@ food_location: cupboard_and_cabinet
 #Fruits: location TBA
 fruits: ['apple','orange','paprika']
 fruit: ['apple','orange','paprika']
-fruits_location: dining_table
-fruit_location: dining_table
+fruits_location: bookcase
+fruit_location: bookcase
 
 #Kitchen Stuff
 kitchen_stuff: ['bowl','cup','fork','knife','plate','spoon']
 kitchen_stuffs: ['bowl','cup','fork','knife','plate','spoon']
-kitchen_stuffs_location: dining_table
-kitchen_stuff_location: dining_table
+kitchen_stuffs_location: storage_table
+kitchen_stuff_location: storage_table
 
 #Snacks : location: TBA
 snacks: ['crackers',  'potato_chips', 'pringles']
 snack:  ['crackers',  'potato_chips', 'pringles']
-snacks_location: center_table
-snack_location: center_table
+snacks_location: bookcase
+snack_location: bookcase
 
 unknown: []
 unknown_location: waste_bin
@@ -141,7 +141,7 @@ living_room: ['bookcase', 'couch', 'end_table','lamp']
 kitchen: ['cupboard', 'counter','dishwasher', 'sink','storage_table']
 corridor: []
 
-bed : [] 
+bed : []
 desk: []
 side_table: []
 dining_table: []
@@ -151,7 +151,7 @@ end_table: []
 lamp: []
 cupboard: []
 counter: []
-dishwasher: [] 
+dishwasher: []
 sink: []
 storage_table: []
 
