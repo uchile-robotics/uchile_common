@@ -34,6 +34,12 @@ fruit: ['apple','orange','paprika']
 fruits_location: dining_table
 fruit_location: dining_table
 
+#Kitchen Stuff
+kitchen_stuff: ['bowl','cup','fork','knife','plate','spoon']
+kitchen_stuffs: ['bowl','cup','fork','knife','plate','spoon']
+kitchen_stuffs_location: dining_table
+kitchen_stuff_location: dining_table
+
 #Snacks : location: TBA
 snacks: ['crackers',  'potato_chips', 'pringles']
 snack:  ['crackers',  'potato_chips', 'pringles']
@@ -44,8 +50,8 @@ unknown: []
 unknown_location: waste_bin
 
 
-small_object: ['cloth', 'scrubby', 'sponge', 'basket', 'tray', 'chocolate_drink', 'coke', 'orange_juice', 'grape_juice', 'sprite', 'cereal', 'noodles', 'sausage', 'apple', 'orange', 'paprika', 'crackers', 'potato_chips', 'pringles']
-small_objects: ['cloth', 'scrubby', 'sponge', 'basket', 'tray', 'chocolate_drink', 'coke', 'orange_juice', 'grape_juice', 'sprite', 'cereal', 'noodles', 'sausage', 'apple', 'orange', 'paprika', 'crackers', 'potato_chips', 'pringles']
+small_object: ['cloth', 'scrubby', 'sponge', 'basket', 'tray', 'chocolate_drink', 'coke', 'orange_juice', 'grape_juice', 'sprite', 'cereal', 'noodles', 'sausage', 'apple', 'orange', 'paprika', 'crackers', 'potato_chips', 'pringles','bowl','cup','fork','knife','plate','spoon']
+small_objects: ['cloth', 'scrubby', 'sponge', 'basket', 'tray', 'chocolate_drink', 'coke', 'orange_juice', 'grape_juice', 'sprite', 'cereal', 'noodles', 'sausage', 'apple', 'orange', 'paprika', 'crackers', 'potato_chips', 'pringles','bowl','cup','fork','knife','plate','spoon']
 
 classes_colour : ['blue','red','yellow','black','white','grey','green','brown','pink','orange']
 blue: ['sausage']
@@ -54,18 +60,18 @@ yellow: ['scrubby','cereal']
 black: ['potato_chips']
 white: ['basket', 'tray', 'orange_juice', 'grape_juice','noodles']
 grey: []
-green: ['sprite','pringles']
+green: ['sprite','pringles','bowl','cup','fork','knife','plate','spoon']
 brown: ['chocolate_drink']
 pink: ['sponge']
 orange: ['cloth', 'orange','crackers']
 
-size : ['cloth', 'scrubby', 'sponge', 'basket', 'tray', 'chocolate_drink', 'coke', 'orange_juice', 'grape_juice', 'sprite', 'cereal', 'noodles', 'sausage', 'apple', 'orange', 'paprika', 'crackers', 'potato_chips', 'pringles']
-weigth : ['cloth', 'scrubby', 'sponge', 'basket', 'tray', 'chocolate_drink', 'coke', 'orange_juice', 'grape_juice', 'sprite', 'cereal', 'noodles', 'sausage', 'apple', 'orange', 'paprika', 'crackers', 'potato_chips', 'pringles']
+size : ['cloth', 'scrubby', 'sponge', 'basket', 'tray', 'chocolate_drink', 'coke', 'orange_juice', 'grape_juice', 'sprite', 'cereal', 'noodles', 'sausage', 'apple', 'orange', 'paprika', 'crackers', 'potato_chips', 'pringles','bowl','cup','fork','knife','plate','spoon']
+weigth : ['cloth', 'scrubby', 'sponge', 'basket', 'tray', 'chocolate_drink', 'coke', 'orange_juice', 'grape_juice', 'sprite', 'cereal', 'noodles', 'sausage', 'apple', 'orange', 'paprika', 'crackers', 'potato_chips', 'pringles','bowl','cup','fork','knife','plate','spoon']
 
 unknown_class: unknown
 
 #FIRST VERSION - NO WEIGHT - NO SIZE
-cleaning_stuff_smallest:  cloth'
+cleaning_stuff_smallest:  'cloth'
 cleaning_stuff_biggest: 'scrubby'
 cleaning_stuff_lightest: 'cloth'
 cleaning_stuff_heaviest: 'scrubby'
@@ -102,6 +108,11 @@ fruits_biggest: 'paprika'
 fruits_lightest: 'paprika'
 fruits_heaviest: 'apple'
 
+kitchen_stuff_smallest: 'spoon'
+kitchen_stuff_biggest: 'plate'
+kitchen_stuff_lightest: 'spoon'
+kitchen_stuff_heaviest: 'bowl'
+
 snack_smallest: 'crackers'
 snack_biggest: 'potato_chips'
 snack_lightest: 'crackers'
@@ -115,50 +126,38 @@ object_smallest: 'cloth'
 object_biggest: 'tray'
 object_lightest: 'cloth'
 object_heaviest: 'pringles'
+objects_smallest: 'cloth'
+objects_biggest: 'tray'
+objects_lightest: 'cloth'
+objects_heaviest: 'pringles'
+
 
 places: ['bedroom', 'dining_room', 'living_room', 'kitchen', 'corridor']
 
 # BIG OBJECT and Manipulation places TBA
-bedroom: ['bed', 'night_table', 'wardrobe', 'dresser', 'armchair', 'drawer', 'desk']
-dining_room: ['sideboard', 'cutlery_drawer', 'dining_table', 'chair', 'baby_chair']
-living_room: ['bookshelf', 'sofa', 'coffee_table', 'center_table', 'bar', 'fireplace', 'tv_couch']
-kitchen: ['microwave', 'cupboard', 'counter', 'cabinet', 'sink', 'stove', 'fridge', 'freezer', 'washing_machine', 'dishwasher']
-corridor: ['cabinet']
+bedroom: ['bed', 'desk', 'side_table']
+dining_room: ['dining_table']
+living_room: ['bookcase', 'couch', 'end_table','lamp']
+kitchen: ['cupboard', 'counter','dishwasher', 'sink','storage_table']
+corridor: []
 
-stove: []
-microwave: []
-washbasin: []
-sink: []
-freezer: []
-bidet: []
-shower: []
-toilet: []
-towel_rail: []
-washbasin: []
-cupboard: []
-sink: []
-stove: []
-washing_machine: []
-dishwasher: []
-bookshelf: []
-sofa: []
-coffee_table: []
-bar: []
-fireplace: []
-tv_couch: []
-chair: []
-baby_chair: []
-bed: []
-night_table: []
-wardrobe: []
-dresser: []
-armchair: []
-drawer: []
+bed : [] 
 desk: []
+side_table: []
+dining_table: []
+bookcase: []
+couch: []
+end_table: []
+lamp: []
+cupboard: []
+counter: []
+dishwasher: [] 
+sink: []
+storage_table: []
 
 #BIG OBJECT AND MANIPULATION TBA
-big_object: ['washbasin','bathrooms_cabinet','towel_rail','toilet','bathtub','shower','bidet','dishwasher','washing_machine','freezer','stove','sink','counter','microwave','tv_couch','fireplace','bar','center_table','bookshelf','baby_chair','chair','dining_table','cutlery_drawer','drawer','armchair','dresser','wardrobe','night_table','cupboard','bedside','cabinet','little_desk','teepee','bed','sideboard','kitchen_table','kitchen_shelf','kitchen_counter','fridge','kitchen_rack','desk','left_rack','right_rack','bookcase','sofa','coffee_table','TV','bistro_table','left_planks','right_planck','balcony_shelf','entrance_shelf']
-big_objects: ['washbasin','bathrooms_cabinet','towel_rail','toilet','bathtub','shower','bidet','dishwasher','washing_machine','freezer','stove','sink','counter','microwave','tv_couch','fireplace','bar','center_table','bookshelf','baby_chair','chair','dining_table','cutlery_drawer','drawer','armchair','dresser','wardrobe','night_table','cupboard','bedside','cabinet','little_desk','teepee','bed','sideboard','kitchen_table','kitchen_shelf','kitchen_counter','fridge','kitchen_rack','desk','left_rack','right_rack','bookcase','sofa','coffee_table','TV','bistro_table','left_planks','right_planck','balcony_shelf','entrance_shelf']
+big_object: ['bed', 'desk', 'side_table','dining_table','bookcase', 'couch', 'end_table','lamp','cupboard', 'counter','dishwasher', 'sink','storage_table']
+big_objects: ['bed', 'desk', 'side_table','dining_table','bookcase', 'couch', 'end_table','lamp','cupboard', 'counter','dishwasher', 'sink','storage_table']
 
 bedroom_doors: '1'
 kitchen_doors: '1'    
@@ -167,14 +166,14 @@ dining_room_doors: '0'
 corridor_doors: '1'
 
 # TABLES AND CHAIRS TBA
-bedroom_table: '0'
+bedroom_table: '1'
 kitchen_table: '1'
 living_room_table: '1'
 corridor_table: '0'
-dining_room_table: '0'
+dining_room_table: '1'
 
-bedroom_chairs: '0'
-kitchen_chairs: '6'
+bedroom_chairs: '1'
+kitchen_chairs: '0'
 living_room_chairs: '0'
 corridor_chairs: '0'
-dining_room_chairs: '0'
+dining_room_chairs: '2'
