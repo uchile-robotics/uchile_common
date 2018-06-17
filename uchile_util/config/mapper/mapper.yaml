@@ -1,5 +1,5 @@
 # classes: ['toiletries', 'snacks', 'fruits', 'cutlery', 'tableware', 'food', 'drinks', 'containers', 'cupboardfood', 'cabinetfood']
-classes: ['cleaning_stuff', 'snacks', 'fruits', 'drinks', 'containers','food'] #'cupboardfood', 'cabinetfood']
+classes: ['cleaning_stuff', 'snacks', 'fruits', 'drinks', 'containers','food', 'cutlery', 'tableware'] #'cupboardfood', 'cabinetfood']
 
 
 #Cleaning Stuff: 
@@ -35,10 +35,18 @@ fruits_location: bookcase
 fruit_location: bookcase
 
 #Kitchen Stuff
-kitchen_stuff: ['bowl','cup','fork','knife','plate','spoon']
-kitchen_stuffs: ['bowl','cup','fork','knife','plate','spoon']
-kitchen_stuffs_location: storage_table
-kitchen_stuff_location: storage_table
+# kitchen_stuff: ['bowl','cup','fork','knife','plate','spoon']
+# kitchen_stuffs: ['bowl','cup','fork','knife','plate','spoon']
+# kitchen_stuffs_location: storage_table
+# kitchen_stuff_location: storage_table
+
+#Cutlery
+cutlery: ['spoon', 'fork', 'knife']
+cutlery_location: storage_table
+
+#Tableware
+tableware: ['bowl', 'dish', 'cup']
+tableware_location: storage_table
 
 #Snacks : 
 snacks: ['crackers',  'potato_chips', 'pringles']
