@@ -2,19 +2,19 @@
 classes: ['cleaning_stuff', 'snacks', 'fruits', 'drinks', 'containers','food'] #'cupboardfood', 'cabinetfood']
 
 
-#Cleaning Stuff: location: TBA
+#Cleaning Stuff: 
 cleaning_stuff: ['cloth','scrubby','sponge']
 cleaning_stuffs:  ['cloth','scrubby','sponge']
 cleaning_stuffs_location: side_table
 cleaning_stuff_location: side_table
 
-#Containers: location: TBA
+#Containers: 
 containers: ['tray', 'basket']
 container: ['tray', 'basket']
 containers_location: end_table
 container_location: end_table
 
-#Drinks: Location TBA
+#Drinks: 
 drinks: ['chocolate_drink', 'coke', 'orange_juice', 'grape_juice', 'sprite']
 drink: ['chocolate_drink', 'coke', 'orange_juice', 'grape_juice', 'sprite']
 drinks_location: counter
@@ -28,7 +28,7 @@ food_location: cupboard
 #cupboardfood_location: cupboard
 #cabinetfood_location: cabinet
 
-#Fruits: location TBA
+#Fruits: 
 fruits: ['apple','orange','paprika']
 fruit: ['apple','orange','paprika']
 fruits_location: bookcase
@@ -40,7 +40,7 @@ kitchen_stuffs: ['bowl','cup','fork','knife','plate','spoon']
 kitchen_stuffs_location: storage_table
 kitchen_stuff_location: storage_table
 
-#Snacks : location: TBA
+#Snacks : 
 snacks: ['crackers',  'potato_chips', 'pringles']
 snack:  ['crackers',  'potato_chips', 'pringles']
 snacks_location: bookcase
