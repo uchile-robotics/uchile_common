@@ -1,5 +1,5 @@
 # classes: ['toiletries', 'snacks', 'fruits', 'cutlery', 'tableware', 'food', 'drinks', 'containers', 'cupboardfood', 'cabinetfood']
-classes: ['cleaning_stuff', 'snacks', 'fruits', 'drinks', 'containers','food'] #'cupboardfood', 'cabinetfood']
+classes: ['cleaning_stuff', 'snacks', 'fruits', 'drinks', 'containers','food', 'cutlery', 'tableware'] #'cupboardfood', 'cabinetfood']
 
 
 #Cleaning Stuff: 
@@ -34,15 +34,19 @@ fruit: ['apple','orange','paprika']
 fruits_location: bookcase
 fruit_location: bookcase
 
-#Kitchen Stuff
-kitchen_stuff: ['bowl','cup','fork','knife','plate','spoon']
-kitchen_stuffs: ['bowl','cup','fork','knife','plate','spoon']
-kitchen_stuffs_location: storage_table
-kitchen_stuff_location: storage_table
+#Cutlery
+cutlery: ['fork','knife','spoon']
+cutlery_location: storage_table
+
+#Tabletware
+tableware: ['bowl','cup','dish']
+tablewares: ['bowl','cup','dish']
+tablewares_location: storage_table
+tableware_location: storage_table
 
 #Snacks : 
-snacks: ['crackers',  'potato_chips', 'pringles']
-snack:  ['crackers',  'potato_chips', 'pringles']
+snacks: ['crackers', 'potato_chips', 'pringles']
+snack:  ['crackers', 'potato_chips', 'pringles']
 snacks_location: bookcase
 snack_location: bookcase
 
@@ -50,8 +54,8 @@ unknown: []
 unknown_location: waste_bin
 
 
-small_object: ['cloth', 'scrubby', 'sponge', 'basket', 'tray', 'chocolate_drink', 'coke', 'orange_juice', 'grape_juice', 'sprite', 'cereal', 'noodles', 'sausage', 'apple', 'orange', 'paprika', 'crackers', 'potato_chips', 'pringles','bowl','cup','fork','knife','plate','spoon']
-small_objects: ['cloth', 'scrubby', 'sponge', 'basket', 'tray', 'chocolate_drink', 'coke', 'orange_juice', 'grape_juice', 'sprite', 'cereal', 'noodles', 'sausage', 'apple', 'orange', 'paprika', 'crackers', 'potato_chips', 'pringles','bowl','cup','fork','knife','plate','spoon']
+small_object: ['cloth', 'scrubby', 'sponge', 'basket', 'tray', 'chocolate_drink', 'coke', 'orange_juice', 'grape_juice', 'sprite', 'cereal', 'noodles', 'sausage', 'apple', 'orange', 'paprika', 'crackers', 'potato_chips', 'pringles','bowl','cup','fork','knife','dish','spoon']
+small_objects: ['cloth', 'scrubby', 'sponge', 'basket', 'tray', 'chocolate_drink', 'coke', 'orange_juice', 'grape_juice', 'sprite', 'cereal', 'noodles', 'sausage', 'apple', 'orange', 'paprika', 'crackers', 'potato_chips', 'pringles','bowl','cup','fork','knife','dish','spoon']
 
 classes_colour : ['blue','red','yellow','black','white','grey','green','brown','pink','orange']
 blue: ['sausage']
@@ -60,13 +64,13 @@ yellow: ['scrubby','cereal']
 black: ['potato_chips']
 white: ['basket', 'tray', 'orange_juice', 'grape_juice','noodles']
 grey: []
-green: ['sprite','pringles','bowl','cup','fork','knife','plate','spoon']
+green: ['sprite','pringles','bowl','cup','fork','knife','dish','spoon']
 brown: ['chocolate_drink']
 pink: ['sponge']
 orange: ['cloth', 'orange','crackers']
 
-size : ['cloth', 'scrubby', 'sponge', 'basket', 'tray', 'chocolate_drink', 'coke', 'orange_juice', 'grape_juice', 'sprite', 'cereal', 'noodles', 'sausage', 'apple', 'orange', 'paprika', 'crackers', 'potato_chips', 'pringles','bowl','cup','fork','knife','plate','spoon']
-weigth : ['cloth', 'scrubby', 'sponge', 'basket', 'tray', 'chocolate_drink', 'coke', 'orange_juice', 'grape_juice', 'sprite', 'cereal', 'noodles', 'sausage', 'apple', 'orange', 'paprika', 'crackers', 'potato_chips', 'pringles','bowl','cup','fork','knife','plate','spoon']
+size : ['cloth', 'scrubby', 'sponge', 'basket', 'tray', 'chocolate_drink', 'coke', 'orange_juice', 'grape_juice', 'sprite', 'cereal', 'noodles', 'sausage', 'apple', 'orange', 'paprika', 'crackers', 'potato_chips', 'pringles','bowl','cup','fork','knife','dish','spoon']
+weigth : ['cloth', 'scrubby', 'sponge', 'basket', 'tray', 'chocolate_drink', 'coke', 'orange_juice', 'grape_juice', 'sprite', 'cereal', 'noodles', 'sausage', 'apple', 'orange', 'paprika', 'crackers', 'potato_chips', 'pringles','bowl','cup','fork','knife','dish','spoon']
 
 unknown_class: unknown
 
@@ -84,6 +88,11 @@ containers_smallest: 'tray'
 containers_biggest: 'basket'
 containers_lightest: 'tray'
 containers_heaviest: 'basket'
+
+cutlery_smallest: 'cup'
+cutlery_biggest: 'dish'
+cutlery_lightest: 'cup'
+cutlery_heaviest: 'bowl'
 
 drinks_smallest: 'coke'
 drink_smallest: 'sprite'
@@ -108,11 +117,6 @@ fruits_biggest: 'paprika'
 fruits_lightest: 'paprika'
 fruits_heaviest: 'apple'
 
-kitchen_stuff_smallest: 'spoon'
-kitchen_stuff_biggest: 'plate'
-kitchen_stuff_lightest: 'spoon'
-kitchen_stuff_heaviest: 'bowl'
-
 snack_smallest: 'crackers'
 snack_biggest: 'potato_chips'
 snack_lightest: 'crackers'
@@ -121,6 +125,11 @@ snacks_smallest: 'crackers'
 snacks_biggest: 'potato_chips'
 snacks_lightest: 'crackers'
 snacks_heaviest: 'pringles'
+
+tableware_smallest: 'spoon'
+tableware_biggest: 'knife'
+tableware_lightest: 'spoon'
+tableware_heaviest: 'knife'
 
 object_smallest: 'cloth'
 object_biggest: 'tray'
