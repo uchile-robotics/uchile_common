@@ -1,111 +1,188 @@
-classes : ['drink','food','snack','cutlery','container','cleaning_stuff','fruit']
+# classes: ['toiletries', 'snacks', 'fruits', 'cutlery', 'tableware', 'food', 'drinks', 'containers', 'cupboardfood', 'cabinetfood']
+classes: ['cleaning_stuff', 'snacks', 'fruits', 'drinks', 'containers','food', 'cutlery', 'tableware'] #'cupboardfood', 'cabinetfood']
+
+
+#Cleaning Stuff: 
+cleaning_stuff: ['cloth','scrubby','sponge']
+cleaning_stuffs:  ['cloth','scrubby','sponge']
+cleaning_stuffs_location: side_table
+cleaning_stuff_location: side_table
+
+#Containers: 
+containers: ['tray', 'basket']
+container: ['tray', 'basket']
+containers_location: end_table
+container_location: end_table
+
+#Drinks: 
+drinks: ['chocolate_drink', 'coke', 'orange_juice', 'grape_juice', 'sprite']
+drink: ['chocolate_drink', 'coke', 'orange_juice', 'grape_juice', 'sprite']
+drinks_location: counter
+drink_location: counter
+
+#Food: Location TBA
+food: [ 'cereal', 'noodles', 'sausage']
+food_location: cupboard
+#cupboardfood: []
+#cabinetfood: []
+#cupboardfood_location: cupboard
+#cabinetfood_location: cabinet
+
+#Fruits: 
+fruits: ['apple','orange','paprika']
+fruit: ['apple','orange','paprika']
+fruits_location: bookcase
+fruit_location: bookcase
+
+#Cutlery
+cutlery: ['fork','knife','spoon']
+cutlery_location: storage_table
+
+#Tabletware
+tableware: ['bowl','cup','dish']
+tablewares: ['bowl','cup','dish']
+tablewares_location: storage_table
+tableware_location: storage_table
+
+#Snacks : 
+snacks: ['crackers', 'potato_chips', 'pringles']
+snack:  ['crackers', 'potato_chips', 'pringles']
+snacks_location: bookcase
+snack_location: bookcase
+
 unknown: []
-drink: ['aquarius','coke','cold_brew','green_tea']
-food: ['bread','corn','onion','radish']
-snack: ['candy','chewing_gum','cup_star','curry','fries','jelly']
-cutlery: ['chopsticks','fork','spoon']
-container: ['bowl','plate','soup_container']
-cleaning_stuff: ['asience','hair_spray','moisturizer','shampoo']
-fruit: ['apple','orange']
-
 unknown_location: waste_bin
-drink_location: kitchen_counter
-food_location: kitchen_shelf
-snack_location: kitchen_rack
-cutlery_location: sideboard
-container_location: left_rack
-cleaning_stuff_location: right_rack
-fruit_location: balcony_shelf
-drinks_location: kitchen_counter
-snacks_location: kitchen_rack
-containers_location: left_rack
 
-places: ['bedroom','kitchen','living_room','balcony','corridor','entrance']
-bedroom: ['little_desk','teepee','bed']
-kitchen: ['sideboard','kitchen_table','kitchen_shelf','kitchen_counter','fridge','kitchen_rack']
-living_room: ['desk','left_rack','right_rack','bookcase','sofa','coffee_table','TV']
-balcony: ['bistro_table','left_planks','right_planck','balcony_shelf']
+
+small_object: ['cloth', 'scrubby', 'sponge', 'basket', 'tray', 'chocolate_drink', 'coke', 'orange_juice', 'grape_juice', 'sprite', 'cereal', 'noodles', 'sausage', 'apple', 'orange', 'paprika', 'crackers', 'potato_chips', 'pringles','bowl','cup','fork','knife','dish','spoon']
+small_objects: ['cloth', 'scrubby', 'sponge', 'basket', 'tray', 'chocolate_drink', 'coke', 'orange_juice', 'grape_juice', 'sprite', 'cereal', 'noodles', 'sausage', 'apple', 'orange', 'paprika', 'crackers', 'potato_chips', 'pringles','bowl','cup','fork','knife','dish','spoon']
+
+classes_colour : ['blue','red','yellow','black','white','grey','green','brown','pink','orange']
+blue: ['sausage']
+red: ['coke', 'apple','paprika']
+yellow: ['scrubby','cereal']
+black: ['potato_chips']
+white: ['basket', 'tray', 'orange_juice', 'grape_juice','noodles']
+grey: []
+green: ['sprite','pringles','bowl','cup','fork','knife','dish','spoon']
+brown: ['chocolate_drink']
+pink: ['sponge']
+orange: ['cloth', 'orange','crackers']
+
+size : ['cloth', 'scrubby', 'sponge', 'basket', 'tray', 'chocolate_drink', 'coke', 'orange_juice', 'grape_juice', 'sprite', 'cereal', 'noodles', 'sausage', 'apple', 'orange', 'paprika', 'crackers', 'potato_chips', 'pringles','bowl','cup','fork','knife','dish','spoon']
+weigth : ['cloth', 'scrubby', 'sponge', 'basket', 'tray', 'chocolate_drink', 'coke', 'orange_juice', 'grape_juice', 'sprite', 'cereal', 'noodles', 'sausage', 'apple', 'orange', 'paprika', 'crackers', 'potato_chips', 'pringles','bowl','cup','fork','knife','dish','spoon']
+
+unknown_class: unknown
+
+#FIRST VERSION - NO WEIGHT - NO SIZE
+cleaning_stuff_smallest:  'cloth'
+cleaning_stuff_biggest: 'scrubby'
+cleaning_stuff_lightest: 'cloth'
+cleaning_stuff_heaviest: 'scrubby'
+
+container_smallest: 'tray'
+container_biggest: 'basket'
+container_lightest: 'tray'
+container_heaviest: 'basket'
+containers_smallest: 'tray'
+containers_biggest: 'basket'
+containers_lightest: 'tray'
+containers_heaviest: 'basket'
+
+cutlery_smallest: 'cup'
+cutlery_biggest: 'dish'
+cutlery_lightest: 'cup'
+cutlery_heaviest: 'bowl'
+
+drinks_smallest: 'coke'
+drink_smallest: 'sprite'
+drinks_biggest:  'chocolate_drink'
+drink_biggest: 'chocolate_drink'
+drinks_lightest: 'coke'
+drink_lightest: 'sprite'
+drinks_heaviest: 'chocolate_drink'
+drink_heaviest: 'chocolate_drink' 
+
+food_smallest: 'sausage'
+food_biggest: 'noodles'
+food_lightest: 'cereal'
+food_heaviest: 'sausage'
+
+fruit_smallest: 'orange'
+fruit_biggest: 'paprika'
+fruit_lightest: 'paprika'
+fruit_heaviest: 'apple'
+fruits_smallest: 'orange'
+fruits_biggest: 'paprika'
+fruits_lightest: 'paprika'
+fruits_heaviest: 'apple'
+
+snack_smallest: 'crackers'
+snack_biggest: 'potato_chips'
+snack_lightest: 'crackers'
+snack_heaviest: 'pringles'
+snacks_smallest: 'crackers'
+snacks_biggest: 'potato_chips'
+snacks_lightest: 'crackers'
+snacks_heaviest: 'pringles'
+
+tableware_smallest: 'spoon'
+tableware_biggest: 'knife'
+tableware_lightest: 'spoon'
+tableware_heaviest: 'knife'
+
+object_smallest: 'cloth'
+object_biggest: 'tray'
+object_lightest: 'cloth'
+object_heaviest: 'pringles'
+objects_smallest: 'cloth'
+objects_biggest: 'tray'
+objects_lightest: 'cloth'
+objects_heaviest: 'pringles'
+
+
+places: ['bedroom', 'dining_room', 'living_room', 'kitchen', 'corridor']
+
+# BIG OBJECT and Manipulation places TBA
+bedroom: ['bed', 'desk', 'side_table']
+dining_room: ['dining_table']
+living_room: ['bookcase', 'couch', 'end_table','lamp']
+kitchen: ['cupboard', 'counter','dishwasher', 'sink','storage_table']
 corridor: []
-entrance: ['entrance_shelf']
 
+bed : []
+desk: []
+side_table: []
+dining_table: []
+bookcase: []
+couch: []
+end_table: []
+lamp: []
+cupboard: []
+counter: []
+dishwasher: []
+sink: []
+storage_table: []
 
-big_object: ['little_desk','teepee','bed','sideboard','kitchen_table','kitchen_shelf','kitchen_counter','fridge','kitchen_rack','desk','left_rack','right_rack','bookcase','sofa','coffee_table','TV','bistro_table','left_planks','right_planck','balcony_shelf','entrance_shelf']
-big_objects: ['little_desk','teepee','bed','sideboard','kitchen_table','kitchen_shelf','kitchen_counter','fridge','kitchen_rack','desk','left_rack','right_rack','bookcase','sofa','coffee_table','TV','bistro_table','left_planks','right_planck','balcony_shelf','entrance_shelf']
+#BIG OBJECT AND MANIPULATION TBA
+big_object: ['bed', 'desk', 'side_table','dining_table','bookcase', 'couch', 'end_table','lamp','cupboard', 'counter','dishwasher', 'sink','storage_table']
+big_objects: ['bed', 'desk', 'side_table','dining_table','bookcase', 'couch', 'end_table','lamp','cupboard', 'counter','dishwasher', 'sink','storage_table']
 
 bedroom_doors: '1'
 kitchen_doors: '1'    
 living_room_doors: '1'
-balcony_doors: '0'
-corridor_doors: '0'
-entrance_doors: '1'
+dining_room_doors: '0'
+corridor_doors: '1'
 
-bedroom_table: '0'
+# TABLES AND CHAIRS TBA
+bedroom_table: '1'
 kitchen_table: '1'
 living_room_table: '1'
-balcony_table: '1'
 corridor_table: '0'
-entrance_table: '0'
+dining_room_table: '1'
 
-bedroom_chairs: '0'
-kitchen_chairs: '6'
+bedroom_chairs: '1'
+kitchen_chairs: '0'
 living_room_chairs: '0'
-balcony_chairs: '2'
 corridor_chairs: '0'
-entrance_chairs: '0'
-
-classes_colour : ['blue','red','yellow','black','white']
-blue: ['hair_spray','cold_brew','shampoo','cup_star']
-red: ['fries','apple','asience','bowl','bread','candy']
-yellow: ['green_tea','onion','orange','corn']
-black: ['coke','soup_container','jelly']
-white: ['aquarius','moisturizer','radish','chewing_gum','chopsticks','curry','fork','spoon','plate']
-
-
-size : ['spoon','fork','chopsticks','apple','onion','orange','candy','soup_container','chewing_gum','cold_brew','coke','hair_spray','cup_star','fries','asience','jelly','radish','curry','corn','moisturizer','bread','bowl','green_tea','shampoo','aquarius','plate']
-weigth : ['fork','spoon','chopsticks','onion','apple','orange','candy','soup_container','chewing_gum','cold_brew','coke','hair_spray','cup_star','fries','asience','radish','bread','curry','corn','jelly','moisturizer','bowl','green_tea','plate','shampoo','aquarius']
-
-unknown_class: unknown
-
-drink_smallest: 'cold_brew'
-drink_biggest:  'aquarius'
-drink_lightest: 'cold_brew'
-drink_heaviest: 'aquarius' 
-
-food_smallest: 'onion'
-food_biggest: 'bread'
-food_lightest: 'onion'
-food_heaviest: 'radish'
-
-snack_smallest: 'candy'
-snack_biggest: 'bread'
-snack_lightest: 'fries'
-snack_heaviest: 'radish'
-
-cutlery_smallest: 'spoon'
-cutlery_biggest: 'chopsticks'
-cutlery_lightest: 'forks'
-cutlery_heaviest: 'chopsticks'
-
-container_smallest: 'soup_container'
-container_biggest: 'plate'
-container_lightest: 'soup_container'
-container_heaviest: 'bowl'
-
-cleaning_stuff_smallest:  'shampoo'
-cleaning_stuff_biggest: 'shampoo'
-cleaning_stuff_lightest: 'shampoo'
-cleaning_stuff_heaviest: 'shampoo'
-
-fruit_smallest: 'apple'
-fruit_biggest: 'orange'
-fruit_lightest: 'apple'
-fruit_heaviest: 'orange'
-
-object_smallest: 'spoon'
-object_biggest: 'plate'
-object_lightest: 'fork'
-object_heaviest: 'aquarius'
-
-
-
-
+dining_room_chairs: '2'
