@@ -1,5 +1,5 @@
 <launch>
 
-	<node name="simple_pose_transformer" type="simple_pose_transformer" pkg="uchile_tf" output="screen" ns="/bender/tf/"/>
+	<node name="simple_pose_transformer" type="simple_pose_transformer" pkg="uchile_tf" output="screen" ns="/jaime/tf/"/>
 
 </launch>
