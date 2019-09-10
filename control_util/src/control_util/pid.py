@@ -73,7 +73,7 @@ class PID(object):
         self._prev_time = self._cur_time
 
         self._prev_err = 0.0
-
+        self._prev_output=0
         # reset result variables
         self._cp = 0.0
         self._ci = 0.0
