@@ -17,7 +17,7 @@
 #include <uchile_tf/dynamic_robot_state_publisher.h>
 
 // Util para almacenar joints mimics
-typedef std::map<std::string, boost::shared_ptr<urdf::JointMimic> > MimicMap;
+typedef std::map<std::string, std::shared_ptr<urdf::JointMimic> > MimicMap;
 
 using namespace std;
 
@@ -164,7 +164,7 @@ int main(int argc, char** argv) {
   
   // Mimic joints
   MimicMap mimic;
-  for(std::map< std::string, boost::shared_ptr< urdf::Joint > >::iterator i = model.joints_.begin(); i != model.joints_.end(); i++){
+  for(std::map< std::string, std::shared_ptr< urdf::Joint > >::iterator i = model.joints_.begin(); i != model.joints_.end(); i++){
     // Check if current joint(i) is mimic type
     if(i->second->mimic){
       // Add to mimic map
