@@ -65,6 +65,7 @@ add_service_files(
   TimerString.srv
   Transformer.srv
   ValidPoint.srv
+  PersonDetection.srv
 )
 
 ## Generate added messages and services with any dependencies listed here
