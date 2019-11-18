@@ -20,7 +20,7 @@ find_package(catkin REQUIRED COMPONENTS
 )
 find_package(orocos_kdl REQUIRED)
 find_package(Boost REQUIRED COMPONENTS system thread)
-find_package(Eigen REQUIRED)
+find_package(Eigen3 REQUIRED)
 
 # Dynamic reconfigure files for Dynamic tf
 generate_dynamic_reconfigure_options(
