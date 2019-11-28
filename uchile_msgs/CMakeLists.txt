@@ -41,6 +41,7 @@ add_message_files(
     PoseDetections.msg
     Rect.msg
     ROIArray.msg
+    SkeletonWeb.msg
     SemanticObject.msg
     ServoCommand.msg 
     ServoState.msg 
