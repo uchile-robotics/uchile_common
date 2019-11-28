@@ -24,6 +24,7 @@ add_service_files(
   DetectEmerg.srv
   Detection.srv
   DetectState.srv
+  DepthDetection.srv
   DoorDetector.srv
   FaceRecognition.srv
   Float.srv

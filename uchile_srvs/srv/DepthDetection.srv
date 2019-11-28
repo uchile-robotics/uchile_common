@@ -1,0 +1,9 @@
+sensor_msgs/Image rgb_image
+sensor_msgs/Image depth_image
+sensor_msgs/CameraInfo rgb_camera_info
+sensor_msgs/CameraInfo depth_camera_info
+---
+string[] labels
+geometry_msgs/PoseStamped[] poses
+std_msgs/Int32MultiArray skeletons
+uchile_msgs/Rect[] bboxes
