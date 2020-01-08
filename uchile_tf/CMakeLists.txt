@@ -18,6 +18,7 @@ find_package(catkin REQUIRED COMPONENTS
   uchile_msgs
   uchile_srvs
 )
+set(Boost_INCLUDE_DIR "/data/home/nao/gentoo/usr/include")
 find_package(orocos_kdl REQUIRED)
 find_package(Boost REQUIRED COMPONENTS system thread)
 find_package(Eigen3 REQUIRED)
