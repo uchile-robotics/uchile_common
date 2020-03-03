@@ -4,3 +4,4 @@ string[] labels
 geometry_msgs/PoseStamped[] poses
 std_msgs/Int32MultiArray skeletons
 uchile_msgs/Rect[] bboxes
+sensor_msgs/Image[] faces
