@@ -70,7 +70,7 @@ target_link_libraries(dynamic_robot_state_publisher ${orocos_kdl_LIBRARIES} ${ca
 
 
 # Pose transformer
-add_executable(simple_pose_transformer src/TransformPoseSimple.cpp)
+add_executable(simple_pose_transformer src/pose_transformer.cpp)
 add_dependencies(simple_pose_transformer ${catkin_EXPORTED_TARGETS})
 target_link_libraries(simple_pose_transformer ${catkin_LIBRARIES})
 
