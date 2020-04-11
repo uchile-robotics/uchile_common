@@ -12,7 +12,9 @@
   <url type="repository">https://github.com/uchile-robotics/uchile_common</url>
   <!-- dependencies -->
   <buildtool_depend>catkin</buildtool_depend>
+  <!-- build dependencies -->
   <build_depend>cmake_modules</build_depend>
+  <!-- build, export, run dependencies -->
   <depend>catkin</depend>
   <depend>dynamic_reconfigure</depend>
   <depend>eigen</depend>
@@ -26,6 +28,9 @@
   <depend>std_srvs</depend>
   <depend>tf</depend>
   <depend>tf_conversions</depend>
+  <depend>tf2_ros</depend>
   <depend>uchile_srvs</depend>
   <depend>uchile_msgs</depend>
+  <!-- test dependencies -->
+  <test_depend>rostest</test_depend>
 </package>

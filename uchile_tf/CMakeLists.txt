@@ -22,6 +22,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_srvs
   tf
   tf_conversions
+  tf2_ros
   uchile_msgs
   uchile_srvs
 )
@@ -51,6 +52,7 @@ catkin_package(
     std_srvs
     tf
     tf_conversions
+    tf2_ros
     uchile_msgs
     uchile_srvs
   DEPENDS orocos_kdl
@@ -77,12 +79,22 @@ target_link_libraries(dynamic_robot_state_publisher ${orocos_kdl_LIBRARIES} ${ca
 
 
 # Pose transformer
-add_executable(simple_pose_transformer src/pose_transformer.cpp)
+add_executable(simple_pose_transformer src/pose_transformer_node.cpp src/pose_transformer.cpp)
 add_dependencies(simple_pose_transformer ${catkin_EXPORTED_TARGETS})
 target_link_libraries(simple_pose_transformer ${catkin_LIBRARIES})
 
-# Dynamic Robot State Publisher
-add_executable(dyn_state_publisher src/dynamic_joint_state_listener.cpp)
-# Generate cfg headers before
-add_dependencies(dyn_state_publisher ${catkin_EXPORTED_TARGETS} ${PROJECT_NAME}_gencfg)
-target_link_libraries(dyn_state_publisher dynamic_robot_state_publisher ${catkin_LIBRARIES} ${orocos_kdl_LIBRARIES} ${Boost_LIBRARIES})
+# # Dynamic Robot State Publisher
+# add_executable(dyn_state_publisher src/dynamic_joint_state_listener.cpp)
+# # Generate cfg headers before
+# add_dependencies(dyn_state_publisher ${catkin_EXPORTED_TARGETS} ${PROJECT_NAME}_gencfg)
+# target_link_libraries(dyn_state_publisher dynamic_robot_state_publisher ${catkin_LIBRARIES} ${orocos_kdl_LIBRARIES} ${Boost_LIBRARIES})
+
+
+if (CATKIN_ENABLE_TESTING)
+  find_package(rostest REQUIRED)
+  #add_rostest(test/mytest.test)
+  add_rostest_gtest(test_pose_transformer test/pose_transformer.test test/pose_transformer_test.cpp src/pose_transformer.cpp)
+  
+  #catkin_add_gtest(test_pose_transformer test/pose_transformer_test.cpp src/pose_transformer.cpp)
+  target_link_libraries(test_pose_transformer ${catkin_LIBRARIES})
+endif()

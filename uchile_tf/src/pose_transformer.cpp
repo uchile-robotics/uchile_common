@@ -1,35 +1,43 @@
 #include <uchile_tf/pose_transformer.h>
+#include "tf2_geometry_msgs/tf2_geometry_msgs.h"
 
 namespace uchile_tf
 {
-PoseTransformer::PoseTransformer(std::string name) : name_(name)
+PoseTransformer::PoseTransformer(ros::NodeHandle& node_handle, const ros::Duration& lookup_duration)
+  : lookup_duration_(lookup_duration), node_handle_(node_handle)
 {
-  ros::NodeHandle priv("~");
-  priv = ros::NodeHandle("~");
-
-  transform_srv_ = priv.advertiseService("transform", &PoseTransformer::transform, this);
+  tf_listener_ = std::make_unique<tf2_ros::TransformListener>(buffer_);
+  transform_server_ = node_handle_.advertiseService("transform", &PoseTransformer::transformCallback, this);
 }
 
 PoseTransformer::~PoseTransformer()
 {
 }
 
-bool PoseTransformer::transform(uchile_srvs::Transformer::Request& req, uchile_srvs::Transformer::Response& res)
+bool PoseTransformer::transformCallback(uchile_srvs::Transformer::Request& req, uchile_srvs::Transformer::Response& res)
 {
-  tf::StampedTransform transform;
+  geometry_msgs::TransformStamped transform;
   int max_connectivity_exceptions = 5;
   int connectivity_exceptions = 0;
+
+  std::string frame_in = req.pose_in.header.frame_id;
+  std::string frame_out = req.frame_out;
+  ros::Time time_in = req.pose_in.header.stamp;
+
+  if (frame_in == "" || frame_out == "")
+  {
+    return false;
+  }
 
   while (ros::ok())
   {
     try
     {
-      tf_listener_.waitForTransform(req.frame_out, req.pose_in.header.frame_id, req.pose_in.header.stamp,
-                                    ros::Duration(2.0));
-      tf_listener_.transformPose(req.frame_out, req.pose_in, res.pose_out);
+      transform = buffer_.lookupTransform(frame_out, frame_in, time_in, lookup_duration_);
+      tf2::doTransform(req.pose_in, res.pose_out, transform);
       break;
     }
-    catch (tf::ConnectivityException& e)
+    catch (tf2::ConnectivityException& e)
     {
       ROS_WARN_STREAM("Requested a transform between unconnected trees!: " << e.what());
       connectivity_exceptions++;
@@ -40,7 +48,7 @@ bool PoseTransformer::transform(uchile_srvs::Transformer::Request& req, uchile_s
       }
       continue;
     }
-    catch (tf::TransformException& e)
+    catch (tf2::TransformException& e)
     {
       ROS_WARN_STREAM("Transform Exception: " << e.what());
       return false;
@@ -50,16 +58,3 @@ bool PoseTransformer::transform(uchile_srvs::Transformer::Request& req, uchile_s
 }
 
 }  // namespace uchile_tf
-
-int main(int argc, char** argv)
-{
-  ros::init(argc, argv, "simple_pose_transformer");
-
-  uchile_tf::PoseTransformer* node = new uchile_tf::PoseTransformer(ros::this_node::getName());
-
-  ros::MultiThreadedSpinner spinner(2);
-  spinner.spin();
-
-  ROS_INFO("Quitting ... \n");
-  return 0;
-}
