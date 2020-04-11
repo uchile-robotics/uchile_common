@@ -1,5 +1,5 @@
-#ifndef UCHILE_TF__POSE_TRANSFORMER__H
-#define UCHILE_TF__POSE_TRANSFORMER__H
+#ifndef UCHILE_TF__POSE_TRANSFORMER_NODE_H
+#define UCHILE_TF__POSE_TRANSFORMER_NODE_H
 
 #include <string>
 #include <memory>
@@ -7,6 +7,7 @@
 #include <ros/ros.h>
 #include <tf2_ros/buffer.h>
 #include <tf2_ros/transform_listener.h>
+#include "tf2_geometry_msgs/tf2_geometry_msgs.h"
 
 #include <uchile_srvs/Transformer.h>
 
@@ -30,4 +31,4 @@ private:
 
 } /* namespace uchile_tf */
 
-#endif  // UCHILE_TF__POSE_TRANSFORMER__H
+#endif  // UCHILE_TF__POSE_TRANSFORMER_NODE_H

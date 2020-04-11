@@ -1,16 +1,22 @@
 #include <gtest/gtest.h>
 
 #include <memory>
-#include <uchile_tf/pose_transformer.h>
-#include <tf2_ros/static_transform_broadcaster.h>
 
-class PoseTransformer_Fixture : public ::testing::Test
+#include <ros/ros.h>
+#include <ros/service_client.h>
+
+#include <tf2_ros/static_transform_broadcaster.h>
+#include <tf2_geometry_msgs/tf2_geometry_msgs.h>
+
+#include <uchile_srvs/Transformer.h>
+
+class PoseTransformerNode_Fixture : public ::testing::Test
 {
 protected:
   void SetUp() override
   {
-    ros::NodeHandle node_handle("~");
-    unit = std::make_unique<uchile_tf::PoseTransformer>(node_handle, ros::Duration(0.1));
+    node_handle = std::make_unique<ros::NodeHandle>("~");
+    transform_client = node_handle->serviceClient<uchile_srvs::Transformer>("/pose_transformer_node/transform");
   }
 
   geometry_msgs::PoseStamped createPose(const std::string& frame_id)
@@ -20,6 +26,12 @@ protected:
     pose.header.frame_id = frame_id;
     pose.pose.orientation.w = 1.0;
     return pose;
+  }
+
+  void waitForExistence()
+  {
+    bool exists(transform_client.waitForExistence(ros::Duration(1)));
+    EXPECT_TRUE(exists);
   }
 
   void broadcastStaticTransform(const std::string& parent, const std::string& child, const float dx, const float dy,
@@ -41,7 +53,6 @@ protected:
     tf.transform.rotation.w = quat.w();
     tf.header.stamp = ros::Time::now();
     transform_broadcaster.sendTransform(tf);
-    ROS_WARN_STREAM(tf);
   }
 
   void EXPECT_POSITION(const geometry_msgs::PoseStamped& pose_stamped, const float x, const float y, const float z)
@@ -62,80 +73,73 @@ protected:
     EXPECT_NEAR(orientation->w, qw, DELTA_F);
   }
 
-  std::unique_ptr<uchile_tf::PoseTransformer> unit;
+  std::unique_ptr<ros::NodeHandle> node_handle;
+  ros::ServiceClient transform_client;
   uchile_srvs::Transformer::Request req{};
   uchile_srvs::Transformer::Response res{};
   tf2_ros::StaticTransformBroadcaster transform_broadcaster;
   float DELTA_F = 0.001;
 };
 
-TEST_F(PoseTransformer_Fixture, transformCallback_GivenSameFrames_ExpectSamePose)
+TEST_F(PoseTransformerNode_Fixture, clientCall_GivenSameFrames_ExpectSamePose)
 {
   req.pose_in = createPose("frame_a");
   req.frame_out = "frame_a";
 
-  EXPECT_TRUE(unit->transformCallback(req, res));
+  waitForExistence();
+  EXPECT_TRUE(transform_client.call(req, res));
   EXPECT_EQ(req.pose_in, res.pose_out);
   EXPECT_EQ(req.pose_in.header.frame_id, req.frame_out);
 }
 
-TEST_F(PoseTransformer_Fixture, transformCallback_GivenNonExistentInputFrame_ExpectServiceError)
+TEST_F(PoseTransformerNode_Fixture, clientCall_GivenNonExistentInputFrame_ExpectServiceError)
 {
+  broadcastStaticTransform("frame_a", "frame_b", 0.0F, 0.0F, 0.0F);
   req.pose_in = createPose("invalid_frame");
   req.frame_out = "frame_b";
-  EXPECT_FALSE(unit->transformCallback(req, res));
+
+  waitForExistence();
+  EXPECT_FALSE(transform_client.call(req, res));
 }
 
-TEST_F(PoseTransformer_Fixture, transformCallback_GivenNonExistentOutputFrame_ExpectServiceError)
+TEST_F(PoseTransformerNode_Fixture, clientCall_GivenNonExistentOutputFrame_ExpectServiceError)
 {
+  broadcastStaticTransform("frame_a", "frame_b", 0.0F, 0.0F, 0.0F);
   req.pose_in = createPose("frame_a");
   req.frame_out = "invalid_frame";
-  EXPECT_FALSE(unit->transformCallback(req, res));
+
+  waitForExistence();
+  EXPECT_FALSE(transform_client.call(req, res));
 }
 
-TEST_F(PoseTransformer_Fixture, transformCallback_GivenEmptyInputFrame_ExpectServiceError)
+TEST_F(PoseTransformerNode_Fixture, clientCall_GivenEmptyInputFrame_ExpectServiceError)
 {
+  broadcastStaticTransform("frame_a", "frame_b", 0.0F, 0.0F, 0.0F);
   req.pose_in = createPose("");
   req.frame_out = "frame_a";
-  EXPECT_FALSE(unit->transformCallback(req, res));
+
+  waitForExistence();
+  EXPECT_FALSE(transform_client.call(req, res));
 }
 
-TEST_F(PoseTransformer_Fixture, transformCallback_GivenEmptyOutputFrame_ExpectServiceError)
+TEST_F(PoseTransformerNode_Fixture, clientCall_GivenEmptyOutputFrame_ExpectServiceError)
 {
+  broadcastStaticTransform("frame_a", "frame_b", 0.0F, 0.0F, 0.0F);
   req.pose_in = createPose("frame_a");
   req.frame_out = "";
-  EXPECT_FALSE(unit->transformCallback(req, res));
+
+  waitForExistence();
+  EXPECT_FALSE(transform_client.call(req, res));
 }
 
-TEST_F(PoseTransformer_Fixture, transformCallback_GivenDeltaX_ExpectTransformedPose)
-{
-  broadcastStaticTransform("parent", "child", 1.0F, 0.0F, 0.0F);
-  req.pose_in = createPose("child");
-  req.frame_out = "parent";
-
-  EXPECT_TRUE(unit->transformCallback(req, res));
-  EXPECT_POSITION(res.pose_out, 1.0, 0.0, 0.0);
-  EXPECT_EQ(res.pose_out.header.frame_id, req.frame_out);
-}
-
-TEST_F(PoseTransformer_Fixture, transformCallback_GivenDeltaY_ExpectTransformedPose)
-{
-  broadcastStaticTransform("parent", "child", 0.0F, 1.0F, 0.0F);
-  req.pose_in = createPose("child");
-  req.frame_out = "parent";
-
-  EXPECT_TRUE(unit->transformCallback(req, res));
-  EXPECT_POSITION(res.pose_out, 0.0, 1.0, 0.0);
-  EXPECT_EQ(res.pose_out.header.frame_id, req.frame_out);
-}
-
-TEST_F(PoseTransformer_Fixture, transformCallback_GivenDeltaTheta_ExpectTransformedPose)
+TEST_F(PoseTransformerNode_Fixture, clientCall_GivenTransform_ExpectTransformedPose)
 {
   broadcastStaticTransform("parent", "child", 1.0F, 2.0F, M_PI / 2);
   req.pose_in = createPose("child");
   req.frame_out = "parent";
 
-  EXPECT_TRUE(unit->transformCallback(req, res));
+  waitForExistence();
+  EXPECT_TRUE(transform_client.call(req, res));
   EXPECT_EQ(res.pose_out.header.frame_id, req.frame_out);
   EXPECT_POSITION(res.pose_out, 1.0, 2.0, 0.0);
   EXPECT_ORIENTATION(res.pose_out, 0.0, 0.0, 0.7071, 0.7071);
@@ -143,8 +147,8 @@ TEST_F(PoseTransformer_Fixture, transformCallback_GivenDeltaTheta_ExpectTransfor
 
 int main(int argc, char** argv)
 {
-  ros::init(argc, argv, "pose_transformer_test");
-  testing::InitGoogleTest(&argc, argv);
+  ros::init(argc, argv, "pose_transformer_node_test");
   srand((int)time(0));
+  testing::InitGoogleTest(&argc, argv);
   return RUN_ALL_TESTS();
 }
