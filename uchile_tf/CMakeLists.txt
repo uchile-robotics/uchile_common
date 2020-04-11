@@ -1,6 +1,13 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(uchile_tf)
 
+# ROS melodic C++ version: C++14
+add_compile_options(-std=c++14)
+
+## Treat Warnings as Errors
+add_definitions(-Wall -Werror)
+
+
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
