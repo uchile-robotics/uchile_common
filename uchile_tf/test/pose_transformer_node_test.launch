@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<launch>
+  <node pkg="uchile_tf" type="simple_pose_transformer" name="pose_transformer_node"/>
+  <test pkg="uchile_tf" test-name="pose_transformer_node_test" type="pose_transformer_node_test"/>
+</launch>
