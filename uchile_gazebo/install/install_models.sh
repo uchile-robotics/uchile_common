@@ -37,7 +37,7 @@ if [ ! -r "$BACKUP_FILE_FULL" ]; then
 	
 	# Download uchile_gazebo meshes
 	echo "$installer Backup file not found ($BACKUP_FILE_FULL), downloading models ..."
-	"$UCHILE_SYSTEM"/shell/megadown/megadown 'https://mega.nz/#!2lEDyIKR#!0UE7Hr8O4mmSiLTYK-P8lNF5Vuq2PBycokW4OyjeRuw'
+	"$UCHILE_SYSTEM"/shell/megadown/megadown 'https://mega.nz/#!jpdzVaIb#!qMQEp2vHLCCA12o_o2MfURTaWcSdibAK2kUPLsensG0'
 	if [ $? -ne 0 ]; then
 	    echo "$installer ${red}Error downloading mesh files.${reset}"
 	    exit 1 # Terminate and indicate error
