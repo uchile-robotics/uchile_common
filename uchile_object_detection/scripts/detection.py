@@ -94,8 +94,20 @@ class RGBD():
 
         msg = rospy.wait_for_message(
             "/bender/sensors/rgbd_head/depth/points", PointCloud2)
+        try:
+            trans = self.tf_buffer.lookup_transform('bender/base_link', msg.header.frame_id,
+                                           msg.header.stamp,
+                                           rospy.Duration(1))
+        except tf2_ros.LookupException as ex:
+            rospy.logwarn(ex)
+            return
+        except tf2_ros.ExtrapolationException as ex:
+            rospy.logwarn(ex)
+            return
+
+        pcloud = tf2_sensor_msgs.tf2_sensor_msgs.do_transform_cloud(msg, trans)
         self._points_data = ros_numpy.numpify(msg)
-        self._pc = ros_numpy.numpify(msg)
+        self._pc = ros_numpy.numpify(pcloud)
         self._image_data = self._points_data['rgb'].view(
             (np.uint8, 4))[..., [0, 1, 2]]
         _xywh = []
@@ -137,11 +149,9 @@ class RGBD():
 
     def segmentation_object(self, obj):
         _point_data = self._points_data.copy()
-        _env_data = self._pc.copy()
 
         frame_rgb = self._image_data.copy()
         frame_mask = np.zeros((480, 640))
-        anti_mask = np.ones((480, 640))
         x, y, w, h, label = obj
         frame_obj = frame_rgb[int(y-h/2):int(y+h/2), int(x-w/2):int(x+w/2)]
 
@@ -166,19 +176,12 @@ class RGBD():
 
         result = cv2.bitwise_and(mask_piso, mask_mesa)
         result = cv2.bitwise_and(result, mask_pared)
-        not_result = cv2.bitwise_not(result)
 
         frame_mask[int(y-h/2):int(y+h/2), int(x-w/2):int(x+w/2)] = result
-        anti_mask[int(y-h/2):int(y+h/2), int(x-w/2):int(x+w/2)] = not_result
-        not_mask = cv2.bitwise_not(frame_mask)
 
-        result_x = (self._points_data['x']*frame_mask/255)
-        result_y = (self._points_data['y']*frame_mask/255)
-        result_z = (self._points_data['z']*frame_mask/255)
-
-        env_x = (self._pc['x']*anti_mask)
-        env_y = (self._pc['y']*anti_mask)
-        env_z = (self._pc['z']*anti_mask)
+        result_x = (np.reshape(self._pc['x'],(480,640))*frame_mask/255)
+        result_y = (np.reshape(self._pc['y'],(480,640))*frame_mask/255)
+        result_z = (np.reshape(self._pc['z'],(480,640))*frame_mask/255)
 
         for i in range(self._w_image):
             for j in range(self._h_image):
@@ -188,51 +191,50 @@ class RGBD():
                     result_y[j,i] = np.nan
                 if abs(result_z[j,i]) < 0.001: 
                     result_z[j,i] = np.nan
+        
+        z_real = filter(lambda z: z > 0.001, result_z.flatten())
+        min_z = min(z_real)
+        max_z = max(z_real)
+        tolerance = 0.02
 
         for i in range(self._w_image):
             for j in range(self._h_image):
-                if abs(env_x[j,i]) < 0.001: 
-                    env_x[j,i] = np.nan
-                if abs(env_y[j,i]) < 0.001:
-                    env_y[j,i] = np.nan
-                if abs(env_z[j,i]) < 0.001: 
-                    env_z[j,i] = np.nan
+                if abs(result_z[j,i]) < min_z + tolerance:
+                    result_x[j,i] = np.nan
+                    result_y[j,i] = np.nan
+                    result_z[j,i] = np.nan
+                #if abs(result_z[j,i]) > max_z - tolerance:
+                #    result_x[j,i] = np.nan
+                #    result_y[j,i] = np.nan
+                #    result_z[j,i] = np.nan
 
         _point_data['x'] = result_x
         _point_data['y'] = result_y
         _point_data['z'] = result_z
 
-        _env_data['x'] = env_x
-        _env_data['y'] = env_y
-        _env_data['z'] = env_z
-
         msg = ros_numpy.msgify(PointCloud2, _point_data)
-        env = ros_numpy.msgify(PointCloud2, _env_data)
 
-        msg.header.frame_id = "bender/sensors/rgbd_head_depth_optical_frame"
-        env.header.frame_id = "bender/sensors/rgbd_head_depth_optical_frame"
+        #msg.header.frame_id = "bender/sensors/rgbd_head_depth_optical_frame"
+        msg.header.frame_id = "bender/base_link"
         
         self.pcloud_pub.publish(msg)
-        #self.pcloud_env_mask.publish(env)
 
+        #try:
+        #    trans = self.tf_buffer.lookup_transform('bender/base_link', msg.header.frame_id,
+        #                                   msg.header.stamp,
+        #                                   rospy.Duration(1))
+        #except tf2_ros.LookupException as ex:
+        #    rospy.logwarn(ex)
+        #    return
+        #except tf2_ros.ExtrapolationException as ex:
+        #    rospy.logwarn(ex)
+        #    return
 
+        #cloud_out = tf2_sensor_msgs.tf2_sensor_msgs.do_transform_cloud(msg, trans)
+        #print(cloud_out.header.frame_id)
+        #self.pcloud_pub_rot.publish(cloud_out)
 
-        try:
-            trans = self.tf_buffer.lookup_transform('bender/base_link', msg.header.frame_id,
-                                           msg.header.stamp,
-                                           rospy.Duration(1))
-        except tf2_ros.LookupException as ex:
-            rospy.logwarn(ex)
-            return
-        except tf2_ros.ExtrapolationException as ex:
-            rospy.logwarn(ex)
-            return
-
-        cloud_out = tf2_sensor_msgs.tf2_sensor_msgs.do_transform_cloud(msg, trans)
-
-        self.pcloud_pub_rot.publish(cloud_out)
-
-        return frame_mask, env
+        return frame_mask
 
     def sort_objects(self, xy):
         x_ref, y_ref = self._w_image/2, self._h_image
@@ -316,7 +318,7 @@ if __name__ == '__main__':
 
     #while not rospy.is_shutdown():
     #    obj_mask = vision_model.segmentation("mustard_bottle")
-    obj_mask, env = vision_model.segmentation("mustard_bottle")
+    obj_mask = vision_model.segmentation("mustard_bottle")
 
     #while not rospy.is_shutdown():
     #   vision_model.publish_env(env)
