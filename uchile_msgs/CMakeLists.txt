@@ -29,6 +29,7 @@ add_message_files(
     FaceEmotion.msg
     FKinfo.msg
     grip.msg
+    ImageArray.msg
     KinectTrackerData.msg
     LedCommand.msg 
     LedCommand2.msg 
@@ -50,6 +51,7 @@ add_message_files(
     SiftDetectionDepth.msg
     SiftDetectionFloor.msg
     StateInfo.msg
+    StringArray.msg
     WaveData.msg
 )
 
