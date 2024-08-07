@@ -1,0 +1,6 @@
+README.md
+setup.py
+uchile_common.egg-info/PKG-INFO
+uchile_common.egg-info/SOURCES.txt
+uchile_common.egg-info/dependency_links.txt
+uchile_common.egg-info/top_level.txt

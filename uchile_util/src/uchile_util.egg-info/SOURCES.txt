@@ -1,0 +1,8 @@
+setup.py
+src/uchile_util/__init__.py
+src/uchile_util/sh.py
+src/uchile_util/syscheck.py
+src/uchile_util.egg-info/PKG-INFO
+src/uchile_util.egg-info/SOURCES.txt
+src/uchile_util.egg-info/dependency_links.txt
+src/uchile_util.egg-info/top_level.txt
