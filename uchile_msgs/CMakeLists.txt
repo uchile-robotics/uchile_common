@@ -10,26 +10,18 @@ find_package(sensor_msgs REQUIRED)
 
 # Mensajes
 rosidl_generate_interfaces(${PROJECT_NAME}
+
   "msg/AnimalCard.msg"
-  "msg/baseArmState.msg"
-  "msg/baseEfectorPosition.msg"
   "msg/BlobList.msg"
-  "msg/CartesianInfo.msg"
   "msg/Command.msg"
   "msg/CylindricalObject.msg"
-  "msg/data_follow.msg"
-  "msg/detections.msg"
+  "msg/DataFollow.msg"
+  "msg/Detections.msg"
   "msg/EmotionDetect.msg"
-  "msg/FaceEmotion.msg"
-  "msg/FKinfo.msg"
-  "msg/grip.msg"
   "msg/ImageArray.msg"
   "msg/KinectTrackerData.msg"
-  "msg/LedCommand.msg"
   "msg/LedCommand2.msg"
-  "msg/Marker.msg"
-  "msg/MarkerArray.msg"
-  "msg/Num.msg"
+  "msg/LedCommand.msg"
   "msg/ObjectDetection.msg"
   "msg/OclusionData.msg"
   "msg/PathBlockingDetections.msg"
@@ -37,17 +29,15 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/PoseDetections.msg"
   "msg/Rect.msg"
   "msg/ROIArray.msg"
-  "msg/SkeletonWeb.msg"
-  "msg/SemanticObject.msg"
-  "msg/ServoCommand.msg"
-  "msg/ServoState.msg"
-  "msg/SiftDetection.msg"
+  "msg/SemanticPolygons.msg"
   "msg/SiftDetectionDepth.msg"
   "msg/SiftDetectionFloor.msg"
+  "msg/SiftDetection.msg"
+  "msg/SkeletonWeb.msg"
   "msg/StateInfo.msg"
   "msg/StringArray.msg"
   "msg/WaveData.msg"
-  "msg/SemanticPolygon.msg"  # <-- tu mensaje nuevo
+
   DEPENDENCIES std_msgs geometry_msgs sensor_msgs
 )
 

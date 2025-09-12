@@ -1,8 +1,7 @@
-int32[] X_skeleton
-int32[] Y_skeleton
-int32[] Hand
-int32 Zone
-int32 Time
-
+int32[] x_skeleton
+int32[] y_skeleton
+int32[] hand
+int32 zone
+int32 time
 
 

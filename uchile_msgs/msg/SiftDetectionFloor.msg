@@ -1,11 +1,11 @@
-float64 heightOfPlane
-float64[] xSift
-float64[] ySift
-float64[] zSift
-float64[] xSiftBase
-float64[] ySiftBase
-float64[] zSiftBase
-int32[] idObj
+float64 height_of_plane
+float64[] x_sift
+float64[] y_sift
+float64[] z_sift
+float64[] x_sift_base
+float64[] y_sift_base
+float64[] z_sift_base
+int32[] id_obj
 string[] names
-float64 siftTime
+float64 sift_time
 
