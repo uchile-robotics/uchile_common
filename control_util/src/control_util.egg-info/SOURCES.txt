@@ -1,8 +1,0 @@
-setup.py
-src/control_util/__init__.py
-src/control_util/command_source.py
-src/control_util/pid.py
-src/control_util.egg-info/PKG-INFO
-src/control_util.egg-info/SOURCES.txt
-src/control_util.egg-info/dependency_links.txt
-src/control_util.egg-info/top_level.txt

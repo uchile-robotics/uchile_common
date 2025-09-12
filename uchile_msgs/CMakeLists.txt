@@ -1,76 +1,55 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.5)
 project(uchile_msgs)
 
-find_package(catkin REQUIRED COMPONENTS
-  geometry_msgs
-  message_generation
-  sensor_msgs
-  std_msgs
-  std_srvs
+find_package(ament_cmake REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(std_srvs REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
+
+# Mensajes
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "msg/AnimalCard.msg"
+  "msg/baseArmState.msg"
+  "msg/baseEfectorPosition.msg"
+  "msg/BlobList.msg"
+  "msg/CartesianInfo.msg"
+  "msg/Command.msg"
+  "msg/CylindricalObject.msg"
+  "msg/data_follow.msg"
+  "msg/detections.msg"
+  "msg/EmotionDetect.msg"
+  "msg/FaceEmotion.msg"
+  "msg/FKinfo.msg"
+  "msg/grip.msg"
+  "msg/ImageArray.msg"
+  "msg/KinectTrackerData.msg"
+  "msg/LedCommand.msg"
+  "msg/LedCommand2.msg"
+  "msg/Marker.msg"
+  "msg/MarkerArray.msg"
+  "msg/Num.msg"
+  "msg/ObjectDetection.msg"
+  "msg/OclusionData.msg"
+  "msg/PathBlockingDetections.msg"
+  "msg/PlaneDetection.msg"
+  "msg/PoseDetections.msg"
+  "msg/Rect.msg"
+  "msg/ROIArray.msg"
+  "msg/SkeletonWeb.msg"
+  "msg/SemanticObject.msg"
+  "msg/ServoCommand.msg"
+  "msg/ServoState.msg"
+  "msg/SiftDetection.msg"
+  "msg/SiftDetectionDepth.msg"
+  "msg/SiftDetectionFloor.msg"
+  "msg/StateInfo.msg"
+  "msg/StringArray.msg"
+  "msg/WaveData.msg"
+  "msg/SemanticPolygon.msg"  # <-- tu mensaje nuevo
+  DEPENDENCIES std_msgs geometry_msgs sensor_msgs
 )
 
-################################################
-## Declare ROS messages, services and actions ##
-################################################
-
-# Generate messages in the 'msg' folder
-add_message_files(
-  FILES
-    AnimalCard.msg
-    baseArmState.msg
-    baseEfectorPosition.msg
-    BlobList.msg
-    CartesianInfo.msg
-    Command.msg
-    CylindricalObject.msg
-    data_follow.msg
-    detections.msg
-    EmotionDetect.msg
-    FaceEmotion.msg
-    FKinfo.msg
-    grip.msg
-    ImageArray.msg
-    KinectTrackerData.msg
-    LedCommand.msg 
-    LedCommand2.msg 
-    Marker.msg 
-    MarkerArray.msg 
-    Num.msg 
-    ObjectDetection.msg
-    OclusionData.msg
-    PathBlockingDetections.msg
-    PlaneDetection.msg
-    PoseDetections.msg
-    Rect.msg
-    ROIArray.msg
-    SkeletonWeb.msg
-    SemanticObject.msg
-    ServoCommand.msg 
-    ServoState.msg 
-    SiftDetection.msg
-    SiftDetectionDepth.msg
-    SiftDetectionFloor.msg
-    StateInfo.msg
-    StringArray.msg
-    WaveData.msg
-)
-
-# Generate added messages and services with any dependencies listed here
-generate_messages(
-  DEPENDENCIES
-    geometry_msgs
-    sensor_msgs
-    std_msgs
-)
-
-###################################
-## catkin specific configuration ##
-###################################
-catkin_package(
-  CATKIN_DEPENDS
-    geometry_msgs
-    message_runtime
-    sensor_msgs
-    std_msgs
-    std_srvs
-)
+ament_export_dependencies(rosidl_default_runtime)
+ament_package()
