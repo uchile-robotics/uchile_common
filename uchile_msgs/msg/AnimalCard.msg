@@ -1,3 +1,4 @@
+
 string name
 string location
 string left_species

@@ -4,13 +4,13 @@ project(uchile_msgs)
 find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(std_msgs REQUIRED)
-find_package(std_srvs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 
 # Mensajes
 rosidl_generate_interfaces(${PROJECT_NAME}
 
+  "msg/Rect.msg"
   "msg/AnimalCard.msg"
   "msg/BlobList.msg"
   "msg/Command.msg"
@@ -27,7 +27,6 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/PathBlockingDetections.msg"
   "msg/PlaneDetection.msg"
   "msg/PoseDetections.msg"
-  "msg/Rect.msg"
   "msg/ROIArray.msg"
   "msg/SemanticPolygons.msg"
   "msg/SiftDetectionDepth.msg"
@@ -38,7 +37,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/StringArray.msg"
   "msg/WaveData.msg"
 
-  DEPENDENCIES std_msgs geometry_msgs sensor_msgs
+  DEPENDENCIES geometry_msgs sensor_msgs
 )
 
 ament_export_dependencies(rosidl_default_runtime)

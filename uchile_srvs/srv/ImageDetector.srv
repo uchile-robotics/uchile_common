@@ -1,7 +1,7 @@
-bool do_EyesRot
+bool do_eyes_rot
 
 ---
 sensor_msgs/Image image
 sensor_msgs/Image[] faces
-sensor_msgs/RegionOfInterest[] BBoxes
+sensor_msgs/RegionOfInterest[] bounding_boxes
 geometry_msgs/PoseStamped[] pose

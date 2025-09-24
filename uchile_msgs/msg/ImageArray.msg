@@ -1,3 +1,3 @@
 # ImageArray.msg
-Header header
+std_msgs/Header header
 sensor_msgs/Image[] data

@@ -1,8 +1,8 @@
 sensor_msgs/Image image
 sensor_msgs/Image[] faces
-uchile_msgs/Rect[] BBoxes
-uchile_msgs/Rect[] eyes_positionL
-uchile_msgs/Rect[] eyes_positionR
+uchile_msgs/Rect[] bounding_boxes
+uchile_msgs/Rect[] eyes_position_l
+uchile_msgs/Rect[] eyes_position_r
 int32 n_faces
 bool simulate_eyes
 ---
