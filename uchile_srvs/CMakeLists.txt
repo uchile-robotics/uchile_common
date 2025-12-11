@@ -55,6 +55,9 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/TimerString.srv"
   "srv/Transformer.srv"
   "srv/ValidPoint.srv"
+  "action/Emotion.action"
+  "action/LlamaSpeak.action"
+  "action/SpeakEmotion.action"
   DEPENDENCIES std_msgs std_srvs geometry_msgs sensor_msgs uchile_msgs
 )
 

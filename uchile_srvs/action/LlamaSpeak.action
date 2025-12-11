@@ -1,0 +1,12 @@
+# Goal (input)
+string user_text
+
+---
+# Result (output LLM)
+bool success
+string emotion
+string llm_output
+
+---
+# Feedback (optional: avance del proceso)
+string status
