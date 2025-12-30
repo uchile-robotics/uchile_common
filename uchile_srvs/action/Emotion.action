@@ -8,7 +8,6 @@ string message
 
 ---
 # Feedback
-string previous_emotion
 string current_status
 
 
