@@ -1,3 +1,3 @@
-uchile_msgs/Rect[] BBoxes 
-uint32[] nPixels
-geometry_msgs/Point[] centerOfMass
+uchile_msgs/Rect[] bounding_boxes 
+uint32[] num_pixels
+geometry_msgs/Point[] center_of_mass

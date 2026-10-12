@@ -1,7 +1,7 @@
-float64 X
-float64 Y
-float64 Z
-float64 Distance
-float64 Theta
-int32 ID
+float64 x
+float64 y
+float64 z
+float64 distance
+float64 theta
+int32 id
 

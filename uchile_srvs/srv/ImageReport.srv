@@ -2,5 +2,5 @@ string only_obj
 ---
 sensor_msgs/Image rgb_img
 sensor_msgs/Image depth_img
-uchile_msgs/Rect[] BBoxes 
+uchile_msgs/Rect[] bounding_boxes
 string[] caption

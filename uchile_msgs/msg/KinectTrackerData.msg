@@ -1,4 +1,4 @@
-int32[] ID 
-float64[] Distance
-float64[] Theta
+int32[] id 
+float64[] distance
+float64[] theta
 

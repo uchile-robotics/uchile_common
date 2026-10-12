@@ -1,92 +1,66 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.5)
 project(uchile_srvs)
 
-find_package(catkin REQUIRED COMPONENTS
-  geometry_msgs
-  message_generation
-  sensor_msgs
-  std_msgs
-  std_srvs
-  uchile_msgs
+find_package(ament_cmake REQUIRED)
+find_package(rosidl_default_generators REQUIRED)
+find_package(std_msgs REQUIRED)
+find_package(std_srvs REQUIRED)
+find_package(geometry_msgs REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(uchile_msgs REQUIRED)
+
+# Archivos de servicio
+rosidl_generate_interfaces(${PROJECT_NAME}
+  "srv/BlobList.srv"
+  "srv/DepthDetection.srv"
+  "srv/DetectEmerg.srv"
+  "srv/Detection.srv"
+  "srv/DetectState.srv"
+  "srv/DoorDetector.srv"
+  "srv/FaceRecognition.srv"
+  "srv/Float.srv"
+  "srv/GenderDetection.srv"
+  "srv/GetShelfPose.srv"
+  "srv/Id.srv"
+  "srv/ImageDetection.srv"
+  "srv/ImageDetector.srv"
+  "srv/ImageRecognition.srv"
+  "srv/ImageReport.srv"
+  "srv/ImageService.srv"
+  "srv/IsOn.srv"
+  "srv/LoadDictionary.srv"
+  "srv/MaskInfo.srv"
+  "srv/ObjectDetection.srv"
+  "srv/ObjectRecognition.srv"
+  "srv/OnOff.srv"
+  "srv/PersonDetection.srv"
+  "srv/PlaneHeight.srv"
+  "srv/PlaySound.srv"
+  "srv/PointCloud2.srv"
+  "srv/PointCloud2Trasnform.srv"
+  "srv/PoseStamped.srv"
+  "srv/Recognition.srv"
+  "srv/ReportGenerator.srv"
+  "srv/RosbagRecord.srv"
+  "srv/SearchPerson.srv"
+  "srv/SiftClearDatabase.srv"
+  "srv/SiftFileTrain.srv"
+  "srv/SiftGuiTrain.srv"
+  "srv/SiftOnlineTrain.srv"
+  "srv/StringArray.srv"
+  "srv/StringReturn.srv"
+  "srv/String.srv"
+  "srv/Synthesize.srv"
+  "srv/TableDetector.srv"
+  "srv/TimerString.srv"
+  "srv/Transformer.srv"
+  "srv/ValidPoint.srv"
+  "action/Emotion.action"
+  "action/LlamaSpeak.action"
+  "action/SpeakEmotion.action"
+  "action/Fibonacci.action"
+  DEPENDENCIES std_msgs std_srvs geometry_msgs sensor_msgs uchile_msgs
 )
 
-################################################
-## Declare ROS messages, services and actions ##
-################################################
-
-
-
-# Generate services in the 'srv' folder
-add_service_files(
-  FILES
-  BlobList.srv
-  Bool.srv
-  DetectEmerg.srv
-  Detection.srv
-  DetectState.srv
-  DepthDetection.srv
-  DoorDetector.srv
-  FaceRecognition.srv
-  Float.srv
-  GenderDetection.srv
-  GetShelfPose.srv
-  ID.srv
-  ImageDetection.srv
-  ImageDetector.srv
-  ImageRecognition.srv
-  ImageReport.srv
-  ImageService.srv
-  IsOn.srv
-  load_dictionary_service.srv
-  MaskInfo.srv
-  NavGoal.srv
-  ObjectDetection.srv
-  objrecService.srv
-  Onoff.srv
-  PlaneHeight.srv
-  play_sound.srv
-  PointCloud2.srv
-  PointCloud2Trasnform.srv
-  PoseStamped.srv
-  Recognition.srv
-  ReportGenerator.srv
-  RosbagRecord.srv
-  SearchPerson.srv
-  SemMap.srv
-  siftClearDatabase.srv
-  siftFileTrain.srv
-  siftGuiTrain.srv
-  siftOnlineTrain.srv
-  String.srv
-  StringArray.srv
-  stringReturn.srv
-  stringService.srv
-  synthesize.srv
-  TableDetector.srv
-  TimerString.srv
-  Transformer.srv
-  ValidPoint.srv
-  PersonDetection.srv
-)
-
-## Generate added messages and services with any dependencies listed here
-generate_messages(
-  DEPENDENCIES
-    geometry_msgs
-    sensor_msgs
-    std_msgs
-    uchile_msgs
-)
-
-
-###################################
-## catkin specific configuration ##
-###################################
-catkin_package(
-  CATKIN_DEPENDS
-    geometry_msgs
-    message_runtime
-    sensor_msgs
-    std_msgs
-    uchile_msgs
-)
+ament_export_dependencies(rosidl_default_runtime)
+ament_package()
