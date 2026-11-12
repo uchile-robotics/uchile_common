@@ -12,7 +12,6 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 
   "msg/Rect.msg"
   "msg/AnimalCard.msg"
-  "msg/BatteryMonitor.msg"
   "msg/BlobList.msg"
   "msg/Command.msg"
   "msg/CylindricalObject.msg"
