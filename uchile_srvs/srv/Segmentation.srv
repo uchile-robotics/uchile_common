@@ -1,0 +1,7 @@
+string prompt
+sensor_msgs/PointCloud2 cloud_in
+---
+bool success
+string message
+sensor_msgs/PointCloud2 scene_segment
+sensor_msgs/PointCloud2 object_segment
